@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { BASE_PATH, mainNav, site } from "@/lib/site";
@@ -31,7 +32,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-line/70 bg-canvas">
       <div
         className={cn(
-          "container grid grid-cols-[1fr_auto_1fr] items-center gap-4 transition-[padding] duration-300",
+          "container grid grid-cols-[1fr_auto_1fr] items-center gap-2 transition-[padding] sm:gap-4 duration-300",
           compact ? "py-2.5" : "py-3 lg:py-5 xl:py-6",
         )}
       >
@@ -81,22 +82,23 @@ export function Header() {
             className={cn(
               "whitespace-nowrap font-medium uppercase text-gold-700 transition-all duration-300",
               compact
-                ? "mt-1 text-[9px] tracking-[0.25em]"
-                : "mt-1.5 text-[10px] tracking-[0.25em] lg:text-[11px]",
+                ? "mt-1 text-[9px] tracking-[0.2em] lg:tracking-[0.25em]"
+                : "mt-1.5 text-[10px] tracking-[0.2em] lg:text-[11px] lg:tracking-[0.25em]",
             )}
           >
             Dance Studio
           </span>
         </Link>
 
-        <div className="col-start-3 flex items-center justify-self-end">
+        <div className="col-start-3 flex items-center gap-1 justify-self-end lg:gap-3">
+          <LanguageSwitcher />
           <Button href="/#schnuppertraining" className="hidden lg:inline-flex">
             Schnuppertraining
           </Button>
 
           <button
             type="button"
-            className="rounded-[2px] p-2 text-ink/80 transition hover:bg-canvas-alt lg:hidden"
+            className="rounded-[2px] p-1.5 text-ink/80 transition hover:bg-canvas-alt sm:p-2 lg:hidden"
             aria-label={open ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={open}
             aria-controls="mobile-nav"
