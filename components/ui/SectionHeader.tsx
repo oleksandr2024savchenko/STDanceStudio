@@ -55,7 +55,7 @@ export function SectionHeader({
       </Tag>
       <Ornament align={align} className="mt-6" />
       {description && (
-        <p className="mt-6 text-base leading-relaxed text-muted md:text-lg">
+        <p className="mt-6 text-base font-light leading-[1.6] text-muted md:text-[17px]">
           {description}
         </p>
       )}

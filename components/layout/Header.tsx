@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-md">
-      <div className="container grid h-20 grid-cols-[1fr_auto_1fr] items-center gap-4 lg:h-28">
+      <div className="container grid h-20 grid-cols-[1fr_auto_1fr] items-center gap-4 lg:h-28 xl:h-[124px]">
         <nav
           aria-label="Hauptnavigation"
           className="hidden justify-self-start lg:block"
@@ -34,8 +34,8 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "rounded-full px-3 py-2 text-sm tracking-wide transition-colors xl:px-4",
-                      active ? "text-gold-700" : "text-muted hover:text-ink",
+                      "rounded-full px-3 py-2 text-[13px] font-normal tracking-wide transition-colors xl:px-4 xl:text-sm",
+                      active ? "text-gold-700" : "text-ink hover:text-gold-700",
                     )}
                   >
                     {item.label}
@@ -56,9 +56,9 @@ export function Header() {
             src={`${BASE_PATH}/images/logo.png`}
             alt={site.name}
             width={640}
-            height={458}
+            height={615}
             priority
-            className="h-14 w-auto lg:h-20 xl:h-24"
+            className="h-14 w-auto lg:h-[88px] xl:h-[104px]"
           />
         </Link>
 

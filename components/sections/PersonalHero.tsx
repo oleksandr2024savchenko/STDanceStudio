@@ -35,7 +35,7 @@ export function PersonalHero({ badge, title, description, actions, profile }: Pr
               </span>
             ))}
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">
+          <p className="mt-7 max-w-xl text-base font-light leading-[1.6] text-muted md:text-[17px]">
             {description}
           </p>
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">{actions}</div>

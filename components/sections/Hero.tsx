@@ -30,7 +30,7 @@ export function Hero({ badge, title, description, actions, proof, media }: Props
               </span>
             ))}
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted">{description}</p>
+          <p className="mt-7 max-w-xl text-base font-light leading-[1.6] text-muted md:text-[17px]">{description}</p>
           {actions && (
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">{actions}</div>
           )}
