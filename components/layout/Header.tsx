@@ -55,10 +55,10 @@ export function Header() {
           <Image
             src={`${BASE_PATH}/images/logo.png`}
             alt={site.name}
-            width={400}
-            height={367}
+            width={640}
+            height={458}
             priority
-            className="h-16 w-auto lg:h-24"
+            className="h-14 w-auto lg:h-20 xl:h-24"
           />
         </Link>
 
