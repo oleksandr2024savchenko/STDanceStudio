@@ -21,7 +21,7 @@ const config: Config = {
           alt: "#F5F1EA",
         },
         /** Champagnergold für Rahmen, Konturen und Zierrat (meist mit Alpha verwenden). */
-        brass: "#C5A880",
+        brass: "#D4AF37",
         /** Karten und Container. */
         surface: "#FFFFFF",
         /** Dünne, warme Rahmen und Trennlinien. */
@@ -32,16 +32,16 @@ const config: Config = {
         muted: "#6E6B65",
         /** Mattes Champagnergold: 500 = Akzent, 700 = Text auf hellem Grund. */
         gold: {
-          50: "#FAF6EF",
-          100: "#F3ECDF",
-          200: "#E8DAC3",
-          300: "#DCC9A6",
-          400: "#D0B992",
-          500: "#C5A880",
-          600: "#B0926A",
-          700: "#8C734B",
-          800: "#6B5638",
-          900: "#4A3B27",
+          50: "#FBF6EA",
+          100: "#F5EBD3",
+          200: "#EBD6A9",
+          300: "#DDC083",
+          400: "#D2AE6C",
+          500: "#C5A059",
+          600: "#B38F46",
+          700: "#8A6A2B",
+          800: "#664E21",
+          900: "#443418",
         },
       },
       fontFamily: {
@@ -52,13 +52,17 @@ const config: Config = {
         eyebrow: "0.28em",
       },
       boxShadow: {
-        cta: "0 8px 20px -10px rgba(26,26,26,0.35)",
-        "cta-hover": "0 12px 26px -12px rgba(26,26,26,0.45)",
+        cta: "inset 0 1px 0 rgba(255,255,255,0.55), 0 8px 20px -10px rgba(166,124,30,0.55)",
+        "cta-hover": "inset 0 1px 0 rgba(255,255,255,0.65), 0 12px 26px -12px rgba(166,124,30,0.65)",
         /** Realistische, weiche Tiefe für gerahmte Flächen. */
         frame: "0 20px 50px rgba(0,0,0,0.08)",
         glass: "0 10px 30px -18px rgba(0,0,0,0.12)",
         gold: "0 1px 2px rgba(0,0,0,0.04), 0 18px 40px -22px rgba(0,0,0,0.14)",
         card: "0 1px 2px rgba(0,0,0,0.03), 0 14px 32px -22px rgba(0,0,0,0.14)",
+      },
+      backgroundImage: {
+        "gold-gradient":
+          "linear-gradient(135deg, #E8CF7C 0%, #D4AF37 48%, #B8902A 100%)",
       },
       keyframes: {
         "fade-up": {

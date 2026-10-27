@@ -40,7 +40,7 @@ export function GoldFrame({
   return (
     <div
       className={cn(
-        "relative border border-brass/60 p-[5px] shadow-frame",
+        "relative border border-[#C5A880]/60 p-[5px] shadow-frame",
         arch ? "rounded-t-[999px] rounded-b-[2px]" : "rounded-[2px]",
         className,
       )}
@@ -55,7 +55,7 @@ export function GoldFrame({
       )}
       <div
         className={cn(
-          "relative overflow-hidden border border-brass/40 bg-surface",
+          "relative overflow-hidden border border-[#C5A880]/40 bg-surface",
           arch ? "rounded-t-[999px] rounded-b-[1px]" : "rounded-[1px]",
           innerClassName,
         )}
