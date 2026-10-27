@@ -35,7 +35,7 @@ export function ChoiceGroup({
               onChange={(event) => onChange(event.target.value)}
               className="peer sr-only"
             />
-            <span className="flex h-full items-center justify-center rounded-xl border border-line px-3 py-3 text-center text-sm text-ink/80 transition peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-700 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-gold-600">
+            <span className="flex h-full items-center justify-center rounded-[2px] border border-line px-3 py-3 text-center text-sm text-ink/80 transition peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-700 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-gold-600">
               {option.label}
             </span>
           </label>

@@ -56,7 +56,7 @@ export default function HochzeitstanzPage() {
           </>
         }
         proof={
-          <SocialProof initials={["O"]}>
+          <SocialProof>
             Persönlich betreut von Oleksandr – auch ohne Tanzerfahrung
           </SocialProof>
         }

@@ -7,19 +7,20 @@ type Size = "md" | "lg";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-gold-gradient text-ink shadow-cta hover:-translate-y-0.5 hover:brightness-105 hover:shadow-cta-hover active:translate-y-0 active:brightness-95",
+    "bg-ink text-white shadow-cta hover:bg-gold-700 hover:shadow-cta-hover",
   outline:
-    "border border-brass/40 bg-white text-ink hover:-translate-y-0.5 hover:border-brass hover:bg-gold-50/70 hover:shadow-[0_6px_18px_-8px_rgba(212,175,55,0.55)] active:translate-y-0 active:bg-canvas",
+    "border border-ink/30 bg-transparent text-ink hover:border-ink",
   ghost: "text-ink/80 hover:bg-canvas-alt hover:text-ink",
 };
 
 const sizes: Record<Size, string> = {
-  md: "h-11 px-6 text-[13px]",
-  lg: "h-14 px-8 text-sm",
+  md: "px-7 py-3.5",
+  lg: "px-9 py-4",
 };
 
 const base =
-  "inline-flex items-center justify-center gap-2 max-w-full text-center sm:whitespace-nowrap rounded-full font-medium tracking-wide " +
+  "inline-flex items-center justify-center gap-2 max-w-full text-center sm:whitespace-nowrap rounded-[2px] " +
+  "text-xs font-medium uppercase leading-snug tracking-[0.18em] " +
   "transition-all duration-300 disabled:pointer-events-none disabled:opacity-50";
 
 type CommonProps = {

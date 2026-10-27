@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 type Props = {
-  /** `arch`: Bogenfenster für Fotos. `panel`: gerundete Fläche für Formulare und Karten. */
+  /** `arch`: Bogenfenster für Fotos. `panel`: Fläche mit Mikro-Rundung für Formulare und Karten. */
   shape?: "arch" | "panel";
   /** Goldener Vierzack (✦) im Scheitelpunkt. */
   star?: boolean;
@@ -40,23 +40,23 @@ export function GoldFrame({
   return (
     <div
       className={cn(
-        "relative border border-brass/50 p-[5px] shadow-frame",
-        arch ? "rounded-t-[999px] rounded-b-[1.75rem]" : "rounded-[1.75rem]",
+        "relative border border-brass/60 p-[5px] shadow-frame",
+        arch ? "rounded-t-[999px] rounded-b-[2px]" : "rounded-[2px]",
         className,
       )}
     >
       {star && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 [filter:drop-shadow(0_0_5px_#FDFBF7)_drop-shadow(0_0_5px_#FDFBF7)]"
+          className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 [filter:drop-shadow(0_0_5px_#FAF8F5)_drop-shadow(0_0_5px_#FAF8F5)]"
         >
           <Star />
         </span>
       )}
       <div
         className={cn(
-          "relative overflow-hidden border border-brass/25 bg-surface",
-          arch ? "rounded-t-[999px] rounded-b-[1.4rem]" : "rounded-[calc(1.75rem-6px)]",
+          "relative overflow-hidden border border-brass/40 bg-surface",
+          arch ? "rounded-t-[999px] rounded-b-[1px]" : "rounded-[1px]",
           innerClassName,
         )}
       >

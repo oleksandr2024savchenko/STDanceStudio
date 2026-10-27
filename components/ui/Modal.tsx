@@ -93,13 +93,13 @@ export function Modal({ open, onClose, title, children }: Props) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.98 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative max-h-[90dvh] w-full max-w-lg overflow-y-auto rounded-2xl border border-gold-500/30 bg-surface p-8 shadow-gold outline-none"
+            className="relative max-h-[90dvh] w-full max-w-lg overflow-y-auto rounded-[2px] border border-gold-500/30 bg-surface p-8 shadow-gold outline-none"
           >
             <button
               type="button"
               onClick={onClose}
               aria-label="Schließen"
-              className="absolute right-4 top-4 rounded-full p-2 text-muted transition hover:bg-canvas-alt hover:text-ink"
+              className="absolute right-4 top-4 rounded-[2px] p-2 text-muted transition hover:bg-canvas-alt hover:text-ink"
             >
               <X className="h-5 w-5" aria-hidden="true" />
             </button>

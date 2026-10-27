@@ -9,7 +9,7 @@ type Props = {
   label: string;
 };
 
-/** Schwebende Glas-Leiste mit vier Kernvorteilen, ragt in den Hero hinein. */
+/** Schwebende Leiste mit vier Kernvorteilen, ragt in den Hero hinein. */
 export function FactsDock({ facts, label }: Props) {
   return (
     <div className="relative z-10 -mt-14 md:-mt-16">
@@ -17,7 +17,7 @@ export function FactsDock({ facts, label }: Props) {
         <Reveal>
           <ul
             aria-label={label}
-            className="grid grid-cols-2 gap-y-4 rounded-2xl border border-brass/30 bg-white/80 p-4 shadow-glass backdrop-blur-md lg:grid-cols-4 lg:gap-y-0"
+            className="grid grid-cols-2 gap-y-4 rounded-[2px] border border-brass/30 bg-surface p-4 shadow-glass lg:grid-cols-4 lg:gap-y-0"
           >
             {facts.map(({ icon: Icon, title, text }) => (
               <li

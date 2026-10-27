@@ -14,7 +14,7 @@ const benefits = [
 
 export function SchnuppertrainingSection() {
   return (
-    <Section id="schnuppertraining" className="bg-hero-glow">
+    <Section id="schnuppertraining">
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <p className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-eyebrow text-gold-700">

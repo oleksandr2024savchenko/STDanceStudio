@@ -65,10 +65,10 @@ export function WeddingBooking() {
               Ihren Hochzeitstanz persönlich betreut.
             </p>
 
-            <div className="mt-10 flex items-center gap-5 rounded-2xl border border-line bg-surface p-6">
+            <div className="mt-10 flex items-center gap-5 rounded-[2px] border border-line bg-surface p-6">
               <span
                 aria-hidden="true"
-                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-gold-500/50 bg-canvas-alt font-serif text-3xl text-gold-700"
+                className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[2px] border border-gold-500/50 bg-canvas-alt font-serif text-3xl text-gold-700"
               >
                 {trainer.name.charAt(0)}
               </span>

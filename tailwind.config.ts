@@ -15,33 +15,33 @@ const config: Config = {
     },
     extend: {
       colors: {
-        /** Hintergrund: Palais-Elfenbein statt kaltem Klinikweiß. */
+        /** Hintergrund: warmes Elfenbein / Seide. */
         canvas: {
-          DEFAULT: "#FDFBF7",
-          alt: "#F9F5EC",
+          DEFAULT: "#FAF8F5",
+          alt: "#F5F1EA",
         },
-        /** Messing-/Palastgold für Rahmen, Konturen und Zierrat (immer mit Alpha verwenden). */
-        brass: "#D4AF37",
+        /** Champagnergold für Rahmen, Konturen und Zierrat (meist mit Alpha verwenden). */
+        brass: "#C5A880",
         /** Karten und Container. */
         surface: "#FFFFFF",
         /** Dünne, warme Rahmen und Trennlinien. */
-        line: "#EADBCE",
-        /** Haupttext und Überschriften: tiefes, warmes Anthrazit. */
-        ink: "#181716",
-        /** Zweittext: Kaschmirgrau für Beschriftungen und Kennzahlen. */
-        muted: "#635F5B",
-        /** Mattes Gold: 500 = Akzent/CTA, 600 = Verlaufsende, 700 = Text auf hellem Grund. */
+        line: "#E8E2D7",
+        /** Haupttext und Überschriften: tiefer, samtiger Graphit. */
+        ink: "#1A1A1A",
+        /** Zweittext: gedämpftes Aschgrau. */
+        muted: "#6E6B65",
+        /** Mattes Champagnergold: 500 = Akzent, 700 = Text auf hellem Grund. */
         gold: {
-          50: "#FBF6EA",
-          100: "#F5EBD3",
-          200: "#EBD6A9",
-          300: "#DDC083",
-          400: "#D2AE6C",
-          500: "#C5A059",
-          600: "#B38F46",
-          700: "#8A6A2B",
-          800: "#664E21",
-          900: "#443418",
+          50: "#FAF6EF",
+          100: "#F3ECDF",
+          200: "#E8DAC3",
+          300: "#DCC9A6",
+          400: "#D0B992",
+          500: "#C5A880",
+          600: "#B0926A",
+          700: "#8C734B",
+          800: "#6B5638",
+          900: "#4A3B27",
         },
       },
       fontFamily: {
@@ -52,22 +52,13 @@ const config: Config = {
         eyebrow: "0.28em",
       },
       boxShadow: {
-        cta: "inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 22px -4px rgba(212,175,55,0.5)",
-        "cta-hover":
-          "inset 0 1px 0 rgba(255,255,255,0.7), 0 10px 30px -6px rgba(212,175,55,0.6)",
-        /** Warme, voluminöse Tiefe für gerahmte Flächen. */
-        frame:
-          "0 34px 64px -30px rgba(166,124,30,0.5), 0 14px 30px -16px rgba(212,175,55,0.35)",
-        glass: "0 18px 44px -22px rgba(166,124,30,0.35)",
-        gold: "0 1px 2px rgba(24,23,22,0.04), 0 18px 44px -20px rgba(179,143,70,0.35)",
-        card: "0 1px 2px rgba(24,23,22,0.03), 0 14px 36px -22px rgba(24,23,22,0.18)",
-      },
-      backgroundImage: {
-        "gold-gradient":
-          "linear-gradient(135deg, #E8CF7C 0%, #D4AF37 48%, #B8902A 100%)",
-        /** Lichtkegel eines Kristalllüsters: warmes Gold, von der Mitte oben nach unten verlaufend. */
-        "hero-glow":
-          "radial-gradient(34% 30% at 50% 0%, rgba(255,236,196,0.8) 0%, rgba(255,236,196,0) 100%), radial-gradient(75% 62% at 50% -6%, rgba(218,174,64,0.24) 0%, rgba(230,194,108,0.10) 42%, rgba(253,251,247,0) 74%)",
+        cta: "0 8px 20px -10px rgba(26,26,26,0.35)",
+        "cta-hover": "0 12px 26px -12px rgba(26,26,26,0.45)",
+        /** Realistische, weiche Tiefe für gerahmte Flächen. */
+        frame: "0 20px 50px rgba(0,0,0,0.08)",
+        glass: "0 10px 30px -18px rgba(0,0,0,0.12)",
+        gold: "0 1px 2px rgba(0,0,0,0.04), 0 18px 40px -22px rgba(0,0,0,0.14)",
+        card: "0 1px 2px rgba(0,0,0,0.03), 0 14px 32px -22px rgba(0,0,0,0.14)",
       },
       keyframes: {
         "fade-up": {

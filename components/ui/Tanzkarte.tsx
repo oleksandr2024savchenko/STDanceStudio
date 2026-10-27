@@ -61,7 +61,7 @@ export function Tanzkarte({ title = "Tanzkarte", subtitle, sections, label, clas
   return (
     <div
       className={cn(
-        "relative rounded-md border border-brass/40 bg-surface px-6 pb-8 pt-10 shadow-frame sm:px-10",
+        "relative rounded-[2px] border border-brass/40 bg-surface px-6 pb-8 pt-10 shadow-frame sm:px-10",
         className,
       )}
     >

@@ -15,7 +15,7 @@ export function PrincipleCards({ principles }: Props) {
         <li key={title}>
           <Reveal delay={index * 0.08} className="h-full">
             <Card className="h-full">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-gold-500/40 bg-gold-50 text-gold-700 shadow-sm">
+              <span className="flex h-12 w-12 items-center justify-center rounded-[2px] border border-gold-500/40 text-gold-700">
                 <Icon className="h-5 w-5" aria-hidden="true" />
               </span>
               <h3 className="mt-6 text-2xl">{title}</h3>

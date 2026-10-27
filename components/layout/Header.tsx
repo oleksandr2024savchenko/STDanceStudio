@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { BASE_PATH, mainNav, site } from "@/lib/site";
@@ -17,10 +17,24 @@ function isActive(pathname: string, href: string): boolean {
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
+
+  // Beim Scrollen schrumpft die hohe Kopfzeile, damit sie dem Inhalt nicht im Weg steht.
+  useEffect(() => {
+    const onScroll = () => setCompact(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-md">
-      <div className="container grid h-20 grid-cols-[1fr_auto_1fr] items-center gap-4 lg:h-28 xl:h-[124px]">
+    <header className="sticky top-0 z-40 border-b border-line/70 bg-canvas">
+      <div
+        className={cn(
+          "container grid grid-cols-[1fr_auto_1fr] items-center gap-4 transition-[padding] duration-300",
+          compact ? "py-2.5" : "py-3 lg:py-5 xl:py-6",
+        )}
+      >
         <nav
           aria-label="Hauptnavigation"
           className="hidden justify-self-start lg:block"
@@ -34,8 +48,8 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "rounded-full px-3 py-2 text-[13px] font-normal tracking-wide transition-colors xl:px-4 xl:text-sm",
-                      active ? "text-gold-700" : "text-ink hover:text-gold-700",
+                      "px-2.5 py-2 text-[13px] font-normal tracking-[0.06em] transition-colors xl:px-4 xl:text-sm xl:tracking-[0.08em]",
+                      active ? "text-gold-700" : "text-[#3A3835] hover:text-gold-500",
                     )}
                   >
                     {item.label}
@@ -49,17 +63,30 @@ export function Header() {
         <Link
           href="/"
           aria-label={`${site.name} – Startseite`}
-          className="col-start-2 shrink-0 justify-self-center"
+          className="col-start-2 flex shrink-0 flex-col items-center justify-self-center"
           onClick={() => setOpen(false)}
         >
           <Image
-            src={`${BASE_PATH}/images/logo.png`}
-            alt={site.name}
-            width={640}
-            height={615}
+            src={`${BASE_PATH}/images/logo-mark.png`}
+            alt=""
+            width={531}
+            height={527}
             priority
-            className="h-14 w-auto lg:h-[88px] xl:h-[104px]"
+            className={cn(
+              "w-auto transition-[height] duration-300",
+              compact ? "h-10 lg:h-12" : "h-11 lg:h-[72px] xl:h-20",
+            )}
           />
+          <span
+            className={cn(
+              "whitespace-nowrap font-medium uppercase text-gold-700 transition-all duration-300",
+              compact
+                ? "mt-1 text-[9px] tracking-[0.25em]"
+                : "mt-1.5 text-[10px] tracking-[0.25em] lg:text-[11px]",
+            )}
+          >
+            Dance Studio
+          </span>
         </Link>
 
         <div className="col-start-3 flex items-center justify-self-end">
@@ -69,7 +96,7 @@ export function Header() {
 
           <button
             type="button"
-            className="rounded-full p-2 text-ink/80 transition hover:bg-canvas-alt lg:hidden"
+            className="rounded-[2px] p-2 text-ink/80 transition hover:bg-canvas-alt lg:hidden"
             aria-label={open ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={open}
             aria-controls="mobile-nav"

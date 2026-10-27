@@ -27,7 +27,7 @@ export function TrainerTeamSection() {
                   <div className="flex items-center gap-5">
                     <span
                       aria-hidden="true"
-                      className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-gold-500/50 bg-canvas-alt font-serif text-4xl text-gold-700"
+                      className="flex h-20 w-20 shrink-0 items-center justify-center rounded-[2px] border border-gold-500/50 bg-canvas-alt font-serif text-4xl text-gold-700"
                     >
                       {trainer.name.charAt(0)}
                     </span>
@@ -43,7 +43,7 @@ export function TrainerTeamSection() {
                     {profile.tags.map((tag) => (
                       <li
                         key={tag}
-                        className="rounded-full border border-line px-3 py-1 text-xs text-ink/80"
+                        className="rounded-[2px] border border-line px-3 py-1 text-xs text-ink/80"
                       >
                         {tag}
                       </li>

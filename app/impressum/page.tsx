@@ -73,7 +73,7 @@ export default function ImpressumPage() {
       eyebrow="Rechtliches"
       title="Impressum"
       intro={
-        <div className="rounded-2xl border border-line bg-surface p-8 shadow-card">
+        <div className="rounded-[2px] border border-line bg-surface p-8 shadow-card">
           <p className="text-sm text-muted">
             Offenlegung gemäß § 5 E-Commerce-Gesetz, § 25 Mediengesetz und § 14 Unternehmensgesetzbuch
           </p>

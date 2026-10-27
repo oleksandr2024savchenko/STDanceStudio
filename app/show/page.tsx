@@ -57,7 +57,7 @@ export default function ShowPage() {
           </>
         }
         proof={
-          <SocialProof initials={["O", "T"]}>
+          <SocialProof>
             Persönlich betreut von Oleksandr und Tania – auch für Komitees ohne Tanzerfahrung
           </SocialProof>
         }

@@ -37,7 +37,7 @@ export default function HomePage() {
           </>
         }
         proof={
-          <SocialProof initials={["O", "T"]}>
+          <SocialProof>
             Offizielles Training für Kinder & Jugendliche ab 4 Jahren
           </SocialProof>
         }

@@ -27,11 +27,10 @@ export function CtaBanner({
   message,
 }: Props) {
   return (
-    <section id={id} className="scroll-mt-36 py-20 md:py-28">
+    <section id={id} className="scroll-mt-28 py-20 md:py-28">
       <Container>
         <Reveal>
           <GoldFrame innerClassName="px-6 py-16 text-center md:px-16 md:py-20">
-            <div className="pointer-events-none absolute inset-0 bg-hero-glow" aria-hidden="true" />
             <div className="relative">
               <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
                 Kontakt

@@ -16,7 +16,7 @@ type Props = {
 /** Gemeinsames Layout für Impressum und Datenschutzerklärung. */
 export function LegalPage({ eyebrow, title, intro, sections, footnote }: Props) {
   return (
-    <div className="bg-hero-glow py-20 md:py-28">
+    <div className="py-20 md:py-28">
       <Container>
         <SectionHeader as="h1" eyebrow={eyebrow} title={title} />
 

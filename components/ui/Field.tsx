@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
 export const controlClasses =
-  "w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm text-ink " +
+  "w-full rounded-[2px] border border-line bg-surface px-4 py-3 text-sm text-ink " +
   "placeholder:text-muted transition focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500";
 
 type Props = {

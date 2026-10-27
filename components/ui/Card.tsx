@@ -18,7 +18,7 @@ export function Card({ children, highlighted = false, className }: Props) {
       whileHover={reduce ? undefined : { y: -4 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
       className={cn(
-        "group relative rounded-2xl border bg-surface p-8 shadow-card transition-shadow duration-300 hover:shadow-gold",
+        "group relative rounded-[2px] border bg-surface p-8 shadow-card transition-shadow duration-300 hover:shadow-gold",
         highlighted
           ? "border-brass/50 shadow-gold"
           : "border-line hover:border-brass/40",

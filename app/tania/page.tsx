@@ -157,7 +157,7 @@ export default function TaniaPage() {
                 {soloLatinDances.map((dance) => (
                   <li
                     key={dance}
-                    className="rounded-full border border-gold-500/30 px-4 py-1.5 text-sm text-gold-700"
+                    className="rounded-[2px] border border-gold-500/30 px-4 py-1.5 text-sm text-gold-700"
                   >
                     {dance}
                   </li>

@@ -19,11 +19,11 @@ type Props = {
 /** Editorial-Split-Hero: Text und Vertrauen links, Bild als visueller Anker rechts. */
 export function Hero({ badge, title, description, actions, proof, media }: Props) {
   return (
-    <section className="relative isolate overflow-hidden bg-hero-glow pb-28 pt-14 md:pb-32 md:pt-20 lg:pt-24">
+    <section className="relative isolate overflow-hidden pb-28 pt-14 md:pb-32 md:pt-20 lg:pt-24">
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <Reveal>
           <StatusBadge>{badge}</StatusBadge>
-          <h1 className="mt-7 text-5xl leading-[1.04] md:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-5xl leading-[1.04] md:text-6xl lg:text-7xl">
             {title.split("\n").map((line) => (
               <span key={line} className="block">
                 <AccentText text={line} />

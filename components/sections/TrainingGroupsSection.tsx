@@ -29,7 +29,7 @@ export function TrainingGroupsSection() {
                   {group.tags.map((tag) => (
                     <li
                       key={tag}
-                      className="rounded-full border border-line px-3 py-1 text-xs text-ink/80"
+                      className="rounded-[2px] border border-line px-3 py-1 text-xs text-ink/80"
                     >
                       {tag}
                     </li>

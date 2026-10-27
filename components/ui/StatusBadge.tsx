@@ -5,17 +5,18 @@ type Props = {
   className?: string;
 };
 
-/** Kapselmedaillon über Überschriften, z. B. „Wien 1040 • Standard & Latein“. */
+/** Schmale Satzzeile über Überschriften, z. B. „✦ Wien 1040 · Standard & Latein ✦“. */
 export function StatusBadge({ children, className }: Props) {
   return (
     <p
       className={cn(
-        "inline-flex max-w-full items-center gap-3 rounded-full border border-brass/40 px-5 py-2 text-[11px] font-medium uppercase leading-snug tracking-[0.16em] text-gold-700 sm:tracking-[0.22em]",
+        "flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-medium uppercase leading-snug tracking-[0.2em] text-gold-700 sm:tracking-[0.25em]",
         className,
       )}
     >
-      <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rotate-45 bg-brass" />
-      {children}
+      <span aria-hidden="true">✦</span>
+      <span>{children.replace(/\s*[•·]\s*/g, " · ")}</span>
+      <span aria-hidden="true">✦</span>
     </p>
   );
 }

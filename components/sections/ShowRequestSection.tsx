@@ -14,7 +14,7 @@ const benefits = [
 
 export function ShowRequestSection() {
   return (
-    <Section id="anfrage" className="bg-hero-glow">
+    <Section id="anfrage">
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">

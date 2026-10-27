@@ -24,11 +24,11 @@ type Props = {
 /** Hero für persönliche Trainerseiten: Text links, Profilkarte rechts. */
 export function PersonalHero({ badge, title, description, actions, profile }: Props) {
   return (
-    <section className="relative isolate overflow-hidden bg-hero-glow pb-24 pt-14 md:pb-32 md:pt-20">
+    <section className="relative isolate overflow-hidden pb-24 pt-14 md:pb-32 md:pt-20">
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
         <Reveal>
           <StatusBadge>{badge}</StatusBadge>
-          <h1 className="mt-7 text-5xl leading-[1.04] md:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-5xl leading-[1.04] md:text-6xl lg:text-7xl">
             {title.split("\n").map((line) => (
               <span key={line} className="block">
                 <AccentText text={line} />
@@ -50,7 +50,7 @@ export function PersonalHero({ badge, title, description, actions, profile }: Pr
               <div className="flex items-center gap-5">
                 <span
                   aria-hidden="true"
-                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full border border-brass/50 bg-canvas-alt font-serif text-5xl text-gold-700"
+                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-[2px] border border-brass/50 bg-canvas-alt font-serif text-5xl text-gold-700"
                 >
                   {profile.name.charAt(0)}
                 </span>
