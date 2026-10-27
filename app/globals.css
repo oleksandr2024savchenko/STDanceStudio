@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Hervorgehobenes Schlüsselwort in Überschriften: feine Kursive in Gold, leicht größer. */
+  .accent-word {
+    @apply font-normal italic text-gold-600;
+    font-size: 1.07em;
+    letter-spacing: -0.01em;
+  }
+
+  /* Feine Strichstärke für alle Icons. */
+  svg.lucide {
+    stroke-width: 1.5;
+  }
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-medium tracking-tight text-ink;
+  }
+
+  ::selection {
+    @apply bg-gold-500/25 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold-600;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
