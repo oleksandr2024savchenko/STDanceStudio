@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { mainNav, site } from "@/lib/site";
+import { BASE_PATH, mainNav, site } from "@/lib/site";
 
 function isActive(pathname: string, href: string): boolean {
   return href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -53,7 +53,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src="/images/logo.png"
+            src={`${BASE_PATH}/images/logo.png`}
             alt={site.name}
             width={400}
             height={367}
