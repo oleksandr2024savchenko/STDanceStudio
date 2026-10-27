@@ -46,9 +46,9 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-controls={listId}
         aria-label="Sprache wählen"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1.5 rounded-[2px] px-1.5 py-2 text-xs font-medium tracking-[0.14em] sm:px-2.5 text-[#3A3835] transition-colors hover:text-gold-700"
+        className="inline-flex items-center gap-1.5 rounded-[2px] px-1.5 py-2 text-[13px] font-normal tracking-[0.06em] text-[#3A3835] transition-colors hover:text-gold-700 sm:px-2.5 xl:text-sm xl:tracking-[0.08em]"
       >
-        <span>{current}</span>
+        <span>Sprache</span>
         <ChevronDown
           aria-hidden="true"
           className={cn("hidden h-3.5 w-3.5 transition-transform duration-200 min-[360px]:block", open && "rotate-180")}
@@ -60,7 +60,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           id={listId}
           role="listbox"
           aria-label="Sprache"
-          className="absolute right-0 top-full z-50 mt-2 min-w-[11rem] rounded-[2px] border border-line bg-surface py-1 shadow-card"
+          className="absolute left-0 top-full lg:left-auto lg:right-0 z-50 mt-2 min-w-[11rem] rounded-[2px] border border-line bg-surface py-1 shadow-card"
         >
           {languages.map((lang) => {
             const selected = lang.code === current;

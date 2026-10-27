@@ -90,15 +90,15 @@ export function Header() {
           </span>
         </Link>
 
-        <div className="col-start-3 flex items-center gap-1 justify-self-end lg:gap-3">
-          <LanguageSwitcher />
+        <div className="col-start-3 flex items-center gap-1 justify-self-end max-lg:contents lg:gap-3">
+          <LanguageSwitcher className="max-lg:col-start-1 max-lg:row-start-1 max-lg:justify-self-start" />
           <Button href="/#schnuppertraining" className="hidden lg:inline-flex">
             Schnuppertraining
           </Button>
 
           <button
             type="button"
-            className="rounded-[2px] p-1.5 text-ink/80 transition hover:bg-canvas-alt sm:p-2 lg:hidden"
+            className="rounded-[2px] p-1.5 text-ink/80 transition hover:bg-canvas-alt max-lg:col-start-3 max-lg:row-start-1 max-lg:justify-self-end sm:p-2 lg:hidden"
             aria-label={open ? "Menü schließen" : "Menü öffnen"}
             aria-expanded={open}
             aria-controls="mobile-nav"
