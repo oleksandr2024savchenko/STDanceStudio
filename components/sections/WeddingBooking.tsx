@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { WeddingForm } from "@/components/forms/WeddingForm";
 import { AccentText } from "@/components/ui/AccentText";
+import { GoldFrame } from "@/components/ui/GoldFrame";
 import { Ornament } from "@/components/ui/Ornament";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
@@ -50,7 +51,7 @@ export function WeddingBooking() {
       </Section>
 
       <Section id="anfrage">
-        <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <Reveal>
             <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
               Unverbindliche Anfrage
@@ -94,9 +95,9 @@ export function WeddingBooking() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-2xl border border-gold-500/30 bg-surface p-8 shadow-gold md:p-10">
+            <GoldFrame innerClassName="p-8 md:p-10">
               <WeddingForm selected={selected} onSelectedChange={setSelected} />
-            </div>
+            </GoldFrame>
           </Reveal>
         </div>
       </Section>

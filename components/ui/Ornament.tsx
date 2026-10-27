@@ -16,9 +16,9 @@ export function Ornament({ align = "center", className }: Props) {
         className,
       )}
     >
-      <span className="h-px w-12 bg-gradient-to-r from-transparent to-gold-500/70" />
-      <span className="h-1.5 w-1.5 rotate-45 bg-gold-500" />
-      <span className="h-px w-12 bg-gradient-to-l from-transparent to-gold-500/70" />
+      <span className="h-px w-12 bg-gradient-to-r from-transparent to-brass/70" />
+      <span className="h-1.5 w-1.5 rotate-45 bg-brass" />
+      <span className="h-px w-12 bg-gradient-to-l from-transparent to-brass/70" />
     </div>
   );
 }

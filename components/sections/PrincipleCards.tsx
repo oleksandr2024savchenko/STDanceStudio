@@ -10,7 +10,7 @@ type Props = {
 
 export function PrincipleCards({ principles }: Props) {
   return (
-    <ul className="grid gap-6 md:grid-cols-3">
+    <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
       {principles.map(({ title, text, icon: Icon }, index) => (
         <li key={title}>
           <Reveal delay={index * 0.08} className="h-full">

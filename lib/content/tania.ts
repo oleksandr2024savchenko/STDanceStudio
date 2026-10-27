@@ -1,4 +1,4 @@
-import { Feather, Flower2, Gem, HeartPulse, Leaf, Sparkles } from "lucide-react";
+import { Feather, Flower2, Gem, HeartPulse, Leaf, Sparkles, Trophy } from "lucide-react";
 import type { PackageItem } from "@/components/sections/PackageCards";
 import type { Principle } from "@/components/sections/PrincipleCards";
 import type { ProcessStep } from "@/components/sections/ProcessSteps";
@@ -16,6 +16,8 @@ export const taniaMessages = {
     "Guten Tag Tania, ich möchte mich für Stretching & Body Conditioning anmelden. Bitte um einen Terminvorschlag.\n\nEinzelstunde oder Kleingruppe:\nWunschzeitraum:",
   soloLatin:
     "Guten Tag Tania, ich interessiere mich für Solo-Latin. Bitte um einen Terminvorschlag für eine erste Einheit.",
+  turnier:
+    "Guten Tag Tania, ich interessiere mich für die Turniervorbereitung. Bitte um einen Terminvorschlag.\n\nTurnier / Datum:\nDisziplin (z. B. Latein, Solo-Latin, Pro-Am):\nBisherige Turniererfahrung:",
   proAm:
     "Guten Tag Tania, ich interessiere mich für Pro-Am-Begleitung auf dem Ballparkett bzw. beim Turnier.\n\nAnlass / Ball:\nDatum:",
 } as const;
@@ -41,6 +43,17 @@ export const taniaServices: readonly ServiceItem[] = [
       "Technik der lateinamerikanischen Tänze",
       "Ausstrahlung und weibliche Bewegungsästhetik",
       "Choreografie für Ihren Auftritt",
+    ],
+  },
+  {
+    id: "turnier",
+    title: "Turniervorbereitung",
+    text: "Gezielte Vorbereitung auf Ihren Turnierstart: Technik, Körperspannung, Kondition und Ausdruck – für Einzeltänzerinnen und Einzeltänzer, Paare und Pro-Am-Starter.",
+    icon: Trophy,
+    points: [
+      "Technik und Feinschliff Ihrer Latein-Choreografie",
+      "Beweglichkeit, Kondition und Körperspannung",
+      "Auftritt, Präsenz und Routine für den Turniertag",
     ],
   },
   {
@@ -75,6 +88,32 @@ export const soloLatinBenefits: readonly string[] = [
   "Ausstrahlung, die den Raum einnimmt",
   "Choreografien für Feiern, Auftritte und Shows",
   "Privatstunden oder kleine Gruppen",
+];
+
+export const turnierBenefits: readonly string[] = [
+  "Saubere Technik und Körperspannung in Ihren Tänzen",
+  "Mehr Beweglichkeit und Kondition für die ganze Runde",
+  "Choreografie und Musikalität passend zu Ihrem Stil",
+  "Sicheres Auftreten und Routine für den Turniertag",
+];
+
+export const turnierSteps: readonly { title: string; text: string }[] = [
+  {
+    title: "Standortbestimmung",
+    text: "Wir klären Turnier, Disziplin und Zeitrahmen und analysieren Technik, Haltung und Kondition.",
+  },
+  {
+    title: "Trainingsplan",
+    text: "Sie erhalten feste Einheiten mit klaren Schwerpunkten und nachvollziehbaren Zwischenzielen.",
+  },
+  {
+    title: "Feinschliff",
+    text: "Wir schleifen Choreografie, Musikalität und Ausdruck, bis jede Bewegung sitzt.",
+  },
+  {
+    title: "Turniertag",
+    text: "Einlaufen, Mentaltraining und Routine für den Auftritt: Sie starten ruhig und gut vorbereitet.",
+  },
 ];
 
 export const soloLatinDances: readonly string[] = [
@@ -158,20 +197,21 @@ export const taniaPackages: readonly PackageItem[] = [
     },
   },
   {
-    id: "solo-latin-pro-am",
-    name: "Solo-Latin & Pro-Am",
+    id: "solo-latin-turnier-pro-am",
+    name: "Solo-Latin, Turnier & Pro-Am",
     price: "Individuell",
     priceNote: "Solo-Latin ab € 85 pro Einheit",
     description:
-      "Privatstunden, Choreografien und Pro-Am-Begleitung erhalten Sie als persönliches Angebot.",
+      "Privatstunden, Turniervorbereitung und Pro-Am-Begleitung erhalten Sie als persönliches Angebot.",
     features: [
       "Solo-Latin als Privatstunde oder Kleingruppe",
+      "Turniervorbereitung mit individuellem Trainingsplan",
       "Pro-Am-Begleitung für Turnier und Ball",
       "Angebot nach Gespräch und Aufwand",
     ],
     cta: {
       label: "Angebot anfragen",
-      href: buildWhatsAppUrl(phone, taniaMessages.soloLatin),
+      href: buildWhatsAppUrl(phone, taniaMessages.general),
       external: true,
     },
   },
@@ -197,6 +237,16 @@ export const taniaFaq: readonly FaqItem[] = [
     question: "Brauche ich für Solo-Latin einen Tanzpartner?",
     answer:
       "Nein. Solo-Latin tanzen Sie allein. Vorkenntnisse sind nicht erforderlich – wir bauen Technik und Ausdruck von Grund auf auf.",
+  },
+  {
+    question: "Für welche Turniere bereiten Sie mich vor?",
+    answer:
+      "Ich begleite Sie bei der Vorbereitung auf Turniere im Latein und im Solo-Latin sowie auf Pro-Am-Starts. Für Standard-Turniere stimme ich mich bei Bedarf mit Oleksandr ab.",
+  },
+  {
+    question: "Wie früh sollte ich mit der Turniervorbereitung beginnen?",
+    answer:
+      "Idealerweise einige Wochen vor dem Turnier, damit Technik, Kondition und Choreografie in Ruhe wachsen können. Auch kurzfristige Anfragen sind je nach Verfügbarkeit möglich.",
   },
   {
     question: "Wie funktioniert Pro-Am für Herren auf Bällen?",

@@ -5,7 +5,6 @@ import { Hero } from "@/components/sections/Hero";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { ScheduleSection } from "@/components/sections/ScheduleSection";
 import { SchnuppertrainingSection } from "@/components/sections/SchnuppertrainingSection";
-import { ShowBallSection } from "@/components/sections/ShowBallSection";
 import { TrainerTeamSection } from "@/components/sections/TrainerTeamSection";
 import { TrainingGroupsSection } from "@/components/sections/TrainingGroupsSection";
 import { ValuesSection } from "@/components/sections/ValuesSection";
@@ -32,7 +31,7 @@ export default function HomePage() {
             <Button href="#schnuppertraining" size="lg">
               Kostenloses Schnuppertraining
             </Button>
-            <Button href="#show" size="lg" variant="outline">
+            <Button href="/show" size="lg" variant="outline">
               Show & Balleröffnungen
             </Button>
           </>
@@ -52,7 +51,6 @@ export default function HomePage() {
       <TrainingGroupsSection />
       <ScheduleSection />
       <PricingSection />
-      <ShowBallSection />
       <TrainerTeamSection />
       <FaqSection
         title="Antworten für *Eltern*"

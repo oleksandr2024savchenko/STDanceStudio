@@ -12,7 +12,7 @@ export function Footer() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent"
       />
-      <div className="container grid gap-12 py-16 md:grid-cols-3">
+      <div className="container grid grid-cols-1 gap-12 py-16 md:grid-cols-3">
         <div>
           <p className="font-serif text-2xl text-ink">
             ST <span className="text-gold-700">Dance</span> Studio

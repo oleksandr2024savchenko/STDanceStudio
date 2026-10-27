@@ -26,6 +26,8 @@ import {
   taniaPackages,
   taniaPrinciples,
   taniaServices,
+  turnierBenefits,
+  turnierSteps,
 } from "@/lib/content/tania";
 import { buildTrainerSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -35,9 +37,9 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 const trainer = trainers.tania;
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Tania – Stretching, Solo-Latin & Pro-Am in Wien",
+  title: "Tania – Stretching, Solo-Latin & Turniervorbereitung in Wien",
   description:
-    "Stretching & Body Conditioning für Erwachsene, Solo-Latin und Pro-Am-Begleitung für Herren auf Wiener Bällen. Termin direkt per WhatsApp vereinbaren.",
+    "Stretching & Body Conditioning für Erwachsene, Solo-Latin, Turniervorbereitung und Pro-Am-Begleitung für Herren auf Wiener Bällen. Termin direkt per WhatsApp vereinbaren.",
   path: "/tania",
 });
 
@@ -47,13 +49,14 @@ export default function TaniaPage() {
       <JsonLd
         data={buildTrainerSchema({
           trainer,
-          jobTitle: "Trainerin für Stretching, Latin und Pro-Am",
+          jobTitle: "Trainerin für Stretching, Latin und Turniervorbereitung",
           description:
-            "Stretching & Body Conditioning für Erwachsene, Solo-Latin und Pro-Am-Begleitung für Herren in Wien.",
+            "Stretching & Body Conditioning für Erwachsene, Solo-Latin, Turniervorbereitung und Pro-Am-Begleitung für Herren in Wien.",
           knowsAbout: [
             "Stretching",
             "Body Conditioning",
             "Solo-Latin",
+            "Turniervorbereitung",
             "Lateinamerikanische Tänze",
             "Pro-Am",
             "Wiener Bälle",
@@ -62,9 +65,9 @@ export default function TaniaPage() {
       />
 
       <PersonalHero
-        badge="Wien 1040 • Stretching & Solo-Latin"
+        badge="Wien 1040 • Stretching, Latin & Turnier"
         title={"Beweglich.\nAufrecht.\n*Anmutig.*"}
-        description="Ich begleite Sie zu mehr Beweglichkeit, Körperspannung und Ausstrahlung – im Stretching, im Solo-Latin und als Pro-Am-Partnerin für Herren auf dem Wiener Ballparkett."
+        description="Ich begleite Sie zu mehr Beweglichkeit, Körperspannung und Ausstrahlung – im Stretching, im Solo-Latin, in der Turniervorbereitung und als Pro-Am-Partnerin für Herren auf dem Wiener Ballparkett."
         actions={
           <>
             <WhatsAppButton
@@ -83,6 +86,7 @@ export default function TaniaPage() {
           focus: [
             "Stretching & Body Conditioning",
             "Solo-Latin & Bewegungsästhetik",
+            "Turniervorbereitung",
             "Pro-Am für Herren",
           ],
           note: "Training im ST Dance Studio, Favoritenstraße 27a, 1040 Wien – Termine nach Vereinbarung.",
@@ -92,8 +96,8 @@ export default function TaniaPage() {
       <Section id="angebot">
         <SectionHeader
           eyebrow="Angebot"
-          title="Drei Wege zu mehr *Ausstrahlung*"
-          description="Körper, Bewegung und Auftritt: Wählen Sie den Schwerpunkt, der zu Ihnen passt, oder kombinieren Sie alle drei."
+          title="Vier Wege zu mehr *Ausstrahlung*"
+          description="Körper, Bewegung und Auftritt: Wählen Sie den Schwerpunkt, der zu Ihnen passt, oder kombinieren Sie mehrere."
         />
         <div className="mt-16">
           <ServiceGrid services={taniaServices} />
@@ -101,7 +105,7 @@ export default function TaniaPage() {
       </Section>
 
       <Section id="stretching" className="bg-canvas-alt">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <SectionHeader
               align="left"
@@ -145,7 +149,7 @@ export default function TaniaPage() {
       </Section>
 
       <Section id="solo-latin">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal delay={0.1} className="order-2 lg:order-1">
             <Card className="p-8 md:p-10">
               <h3 className="text-2xl">Meine Tänze im Solo-Latin</h3>
@@ -192,7 +196,57 @@ export default function TaniaPage() {
         </div>
       </Section>
 
-      <Section id="pro-am" className="bg-canvas-alt">
+      <Section id="turnier" className="bg-canvas-alt">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
+          <Reveal>
+            <SectionHeader
+              align="left"
+              eyebrow="Turniervorbereitung"
+              title="Bereit für Ihren *Turnierstart*"
+              description="Ein Turnier verlangt mehr als saubere Schritte: Körper, Musikalität und Nerven müssen zusammenspielen. Ich bereite Sie ganzheitlich vor – von der ersten Technikanalyse bis zum Einlaufen am Turniertag."
+            />
+            <ul className="mt-8 space-y-4">
+              {turnierBenefits.map((benefit) => (
+                <li key={benefit} className="flex items-start gap-3 text-ink/80">
+                  <Check className="mt-1 h-5 w-5 shrink-0 text-gold-700" aria-hidden="true" />
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-sm leading-relaxed text-muted">
+              Für Einzeltänzerinnen und Einzeltänzer, Paare und Pro-Am-Starter – in Einzelstunden
+              und auf Wunsch mit schriftlichem Trainingsplan.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <Card highlighted className="p-8 md:p-10">
+              <h3 className="text-2xl">Ihre Vorbereitung in vier Schritten</h3>
+              <ol className="mt-6 divide-y divide-line border-y border-line">
+                {turnierSteps.map((step, index) => (
+                  <li key={step.title} className="flex gap-5 py-5">
+                    <span className="font-serif text-3xl leading-none text-gold-700">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h4 className="font-serif text-xl text-ink">{step.title}</h4>
+                      <p className="mt-1 text-sm leading-relaxed text-muted">{step.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <WhatsAppButton
+                phone={trainer.phone}
+                message={taniaMessages.turnier}
+                label="Turniervorbereitung anfragen"
+                className="mt-8 w-full"
+              />
+            </Card>
+          </Reveal>
+        </div>
+      </Section>
+
+      <Section id="pro-am">
         <SectionHeader
           eyebrow="Pro-Am für Herren"
           title="Ihr Auftritt auf dem *Parkett*"
@@ -210,14 +264,14 @@ export default function TaniaPage() {
         </Reveal>
       </Section>
 
-      <Section id="ansatz">
+      <Section id="ansatz" className="bg-canvas-alt">
         <SectionHeader eyebrow="Mein Ansatz" title="Bewegung, die *Ihnen guttut*" />
         <div className="mt-16">
           <PrincipleCards principles={taniaPrinciples} />
         </div>
       </Section>
 
-      <Section id="preise" className="bg-canvas-alt">
+      <Section id="preise">
         <SectionHeader
           eyebrow="Formate & Preise"
           title="*Transparent* und persönlich"
@@ -232,6 +286,7 @@ export default function TaniaPage() {
       </Section>
 
       <FaqSection
+        className="bg-canvas-alt"
         title="Fragen vor Ihrer *ersten Einheit*"
         description="Weitere Fragen beantworte ich gerne im persönlichen Gespräch."
         items={taniaFaq}

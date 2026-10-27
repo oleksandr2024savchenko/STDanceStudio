@@ -12,7 +12,7 @@ export function ValuesSection() {
         title="Tanzen als *Schule fürs Leben*"
         description="Wir verstehen Tanzsport als Erziehung zu Konzentration, Respekt und Selbstsicherheit. Musik und Bewegung sind das Mittel – Charakter ist das Ergebnis."
       />
-      <ul className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {clubValues.map(({ title, text, icon: Icon }, index) => (
           <li key={title}>
             <Reveal delay={index * 0.08} className="h-full">

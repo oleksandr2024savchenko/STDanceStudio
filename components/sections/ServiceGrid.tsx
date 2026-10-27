@@ -20,7 +20,9 @@ export function ServiceGrid({ services }: Props) {
   return (
     <ul
       className={
-        services.length === 3 ? "grid gap-6 lg:grid-cols-3" : "grid gap-6 md:grid-cols-2"
+        services.length === 3
+          ? "grid grid-cols-1 gap-6 lg:grid-cols-3"
+          : "grid grid-cols-1 gap-6 md:grid-cols-2"
       }
     >
       {services.map(({ id, title, text, icon: Icon, points, link }, index) => (

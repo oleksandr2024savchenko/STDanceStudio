@@ -46,7 +46,7 @@ export const trainers: Record<Trainer["id"], Trainer> = {
   tania: {
     id: "tania",
     name: "Tania",
-    role: "Stretching, Latin & Pro-Am-Coaching",
+    role: "Stretching, Latin & Turniervorbereitung",
     href: "/tania",
     phone: "+4367764802096",
     phoneDisplay: "+43 677 64802096",
@@ -67,4 +67,5 @@ export const mainNav: readonly NavItem[] = [
   { label: "Oleksandr", href: "/oleksandr" },
   { label: "Tania", href: "/tania" },
   { label: "Hochzeitstanz", href: "/hochzeitstanz" },
+  { label: "Show", href: "/show" },
 ];

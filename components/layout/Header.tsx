@@ -22,13 +22,13 @@ export function Header() {
       <div className="container flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="font-serif text-2xl tracking-tight text-ink"
+          className="shrink-0 whitespace-nowrap font-serif text-2xl tracking-tight text-ink"
           onClick={() => setOpen(false)}
         >
           ST <span className="text-gold-700">Dance</span> Studio
         </Link>
 
-        <nav aria-label="Hauptnavigation" className="hidden md:block">
+        <nav aria-label="Hauptnavigation" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {mainNav.map((item) => {
               const active = isActive(pathname, item.href);
@@ -52,13 +52,13 @@ export function Header() {
           </ul>
         </nav>
 
-        <Button href="/#schnuppertraining" className="hidden md:inline-flex">
+        <Button href="/#schnuppertraining" className="hidden lg:inline-flex">
           Schnuppertraining
         </Button>
 
         <button
           type="button"
-          className="rounded-full p-2 text-ink/80 transition hover:bg-canvas-alt md:hidden"
+          className="rounded-full p-2 text-ink/80 transition hover:bg-canvas-alt lg:hidden"
           aria-label={open ? "Menü schließen" : "Menü öffnen"}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -81,7 +81,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="overflow-hidden border-t border-line md:hidden"
+            className="overflow-hidden border-t border-line lg:hidden"
           >
             <ul className="container flex flex-col py-4">
               {mainNav.map((item) => {

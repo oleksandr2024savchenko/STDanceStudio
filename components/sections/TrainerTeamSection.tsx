@@ -16,7 +16,7 @@ export function TrainerTeamSection() {
         description="Hinter ST Dance Studio stehen zwei Trainer mit klaren Schwerpunkten. Für Erwachsene und Paare bieten beide zusätzlich persönliches Coaching an."
       />
 
-      <ul className="mx-auto mt-16 grid max-w-4xl gap-6 md:grid-cols-2">
+      <ul className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
         {teamProfiles.map((profile, index) => {
           const trainer = trainers[profile.id];
           return (

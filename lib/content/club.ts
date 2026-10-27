@@ -100,45 +100,6 @@ export const schedule: readonly ScheduleEntry[] = [
   { day: "Samstag", time: "10:00 – 11:30", group: "Formationstraining", age: "ab 8 Jahren" },
 ];
 
-export type ShowService = {
-  title: string;
-  text: string;
-};
-
-export const showServices: readonly ShowService[] = [
-  {
-    title: "Balleröffnung",
-    text: "Einzug, Polonaise und Eröffnungswalzer – stilsicher nach Wiener Tradition und abgestimmt auf Ihr Ballkomitee.",
-  },
-  {
-    title: "Mitternachtseinlage",
-    text: "Eine Showeinlage als Höhepunkt des Abends: Latein, Standard oder eine Kombination, passend zum Motto Ihres Balls.",
-  },
-  {
-    title: "Damen- und Herrenkomitee",
-    text: "Wir studieren den Eröffnungstanz mit Ihrem Komitee ein – auch für Teilnehmende ohne Vorkenntnisse.",
-  },
-  {
-    title: "Vom Paar zur Formation",
-    text: "Paar, Gruppe oder große Formation: Choreografie und Probenplan wachsen mit der Größe Ihres Auftritts.",
-  },
-];
-
-export const showProcess: readonly ShowService[] = [
-  {
-    title: "Anfrage & Briefing",
-    text: "Wir besprechen Anlass, Rahmen, Teilnehmerzahl und Motto Ihrer Veranstaltung.",
-  },
-  {
-    title: "Choreografie & Proben",
-    text: "Sie erhalten ein Konzept samt Probenplan. Wir studieren die Choreografie mit allen Beteiligten ein.",
-  },
-  {
-    title: "Ihr Auftritt",
-    text: "Wir begleiten Sie bis zum Einzug. Der Applaus gehört Ihnen.",
-  },
-];
-
 export type TeamProfile = {
   id: "oleksandr" | "tania";
   summary: string;
@@ -155,8 +116,8 @@ export const teamProfiles: readonly TeamProfile[] = [
   {
     id: "tania",
     summary:
-      "Stretching und Body Conditioning für Erwachsene, Solo-Latin sowie Pro-Am-Begleitung für Herren auf dem Ballparkett.",
-    tags: ["Stretching", "Solo-Latin", "Pro-Am", "Ballparkett"],
+      "Stretching und Body Conditioning für Erwachsene, Solo-Latin, Turniervorbereitung sowie Pro-Am-Begleitung für Herren auf dem Ballparkett.",
+    tags: ["Stretching", "Solo-Latin", "Turniervorbereitung", "Pro-Am"],
   },
 ];
 
@@ -187,10 +148,5 @@ export const clubFaq: readonly FaqItem[] = [
     question: "Kann mein Kind später an Turnieren teilnehmen?",
     answer:
       "Ja. Talentierte und motivierte Kinder begleiten wir in Absprache mit den Eltern in den Turniertanzsport.",
-  },
-  {
-    question: "Wie läuft eine Balleröffnung mit Ihnen ab?",
-    answer:
-      "Nach Ihrer Anfrage besprechen wir Rahmen, Teilnehmerzahl und Motto. Danach erhalten Sie ein Konzept samt Probenplan und wir beginnen mit der Einstudierung.",
   },
 ];

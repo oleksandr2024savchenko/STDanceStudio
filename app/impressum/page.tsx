@@ -81,7 +81,7 @@ export default function ImpressumPage() {
             {buildRows().map((row) => (
               <div
                 key={row.label}
-                className="grid gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"
+                className="grid grid-cols-1 gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-6"
               >
                 <dt className="text-muted">{row.label}</dt>
                 <dd className="text-ink">{row.value}</dd>

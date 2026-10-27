@@ -88,12 +88,14 @@ export function buildServiceSchema({ name, description, path, offers }: ServiceS
     inLanguage: "de-AT",
     provider: { "@id": `${SITE_URL}/#club` },
     areaServed: { "@type": "City", name: "Wien" },
-    offers: offers.map((offer) => ({
-      "@type": "Offer",
-      name: offer.name,
-      price: offer.price,
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-    })),
+    ...(offers.length > 0 && {
+      offers: offers.map((offer) => ({
+        "@type": "Offer",
+        name: offer.name,
+        price: offer.price,
+        priceCurrency: "EUR",
+        availability: "https://schema.org/InStock",
+      })),
+    }),
   };
 }

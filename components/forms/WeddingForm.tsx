@@ -1,8 +1,6 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
 import { useId, useState, type FormEvent } from "react";
-import { Button } from "@/components/ui/Button";
 import { Field, controlClasses } from "@/components/ui/Field";
 import {
   WEDDING_PACKAGE_IDS,
@@ -10,16 +8,13 @@ import {
   weddingPackageLabels,
   type WeddingPackageId,
 } from "@/lib/content/wedding";
+import { EXPERIENCE_LEVELS } from "@/lib/content/registration";
 import { formatDateDe, readField } from "@/lib/forms";
 import { trainers } from "@/lib/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import { ChoiceGroup } from "./ChoiceGroup";
+import { WhatsAppSubmit } from "./WhatsAppSubmit";
 import { WhatsAppSuccess } from "./WhatsAppSuccess";
-
-const EXPERIENCE = [
-  "Keine Tanzerfahrung",
-  "Grundkenntnisse",
-  "Fortgeschritten",
-] as const;
 
 type Props = {
   selected: WeddingPackageId;
@@ -73,29 +68,19 @@ export function WeddingForm({ selected, onSelectedChange }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Anfrage Hochzeitstanz">
-      <fieldset>
-        <legend className="mb-3 text-sm font-medium text-ink">Gewünschtes Paket</legend>
-        <div className="grid gap-3 sm:grid-cols-3">
-          {WEDDING_PACKAGE_IDS.map((pkg) => (
-            <label key={pkg} className="cursor-pointer">
-              <input
-                type="radio"
-                name="package"
-                value={pkg}
-                checked={selected === pkg}
-                onChange={(event) => {
-                  const value = event.target.value;
-                  if (isWeddingPackageId(value)) onSelectedChange(value);
-                }}
-                className="peer sr-only"
-              />
-              <span className="block rounded-xl border border-line px-3 py-3 text-center text-sm text-ink/80 transition peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-700 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-gold-600">
-                {weddingPackageLabels[pkg]}
-              </span>
-            </label>
-          ))}
-        </div>
-      </fieldset>
+      <ChoiceGroup
+        legend="Gewünschtes Paket"
+        name="package"
+        options={WEDDING_PACKAGE_IDS.map((pkg) => ({
+          value: pkg,
+          label: weddingPackageLabels[pkg],
+        }))}
+        value={selected}
+        onChange={(value) => {
+          if (isWeddingPackageId(value)) onSelectedChange(value);
+        }}
+        columns="grid-cols-1 sm:grid-cols-3"
+      />
 
       <Field label="Ihre Namen" htmlFor={id("names")}>
         <input
@@ -109,7 +94,7 @@ export function WeddingForm({ selected, onSelectedChange }: Props) {
         />
       </Field>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <Field label="Hochzeitsdatum" htmlFor={id("date")} optional>
           <input id={id("date")} name="date" type="date" className={controlClasses} />
         </Field>
@@ -124,7 +109,7 @@ export function WeddingForm({ selected, onSelectedChange }: Props) {
             <option value="" disabled>
               Bitte wählen
             </option>
-            {EXPERIENCE.map((level) => (
+            {EXPERIENCE_LEVELS.map((level) => (
               <option key={level} value={level}>
                 {level}
               </option>
@@ -158,18 +143,7 @@ export function WeddingForm({ selected, onSelectedChange }: Props) {
         <textarea id={id("note")} name="note" rows={3} className={controlClasses} />
       </Field>
 
-      <Button
-        type="submit"
-        size="lg"
-        className="w-full"
-        icon={<MessageCircle className="h-5 w-5" aria-hidden="true" />}
-      >
-        Per WhatsApp anfragen
-      </Button>
-      <p className="text-center text-xs leading-relaxed text-muted">
-        Mit dem Absenden öffnet sich WhatsApp mit Ihrer vorausgefüllten Nachricht. Ihre Angaben
-        werden erst übermittelt, wenn Sie die Nachricht dort senden.
-      </p>
+      <WhatsAppSubmit />
     </form>
   );
 }

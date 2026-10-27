@@ -1,4 +1,5 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { GoldFrame } from "@/components/ui/GoldFrame";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -19,7 +20,7 @@ export function ScheduleSection() {
         description="Alle Gruppen trainieren in unserem Saal im 4. Wiener Gemeindebezirk – gut erreichbar und ruhig gelegen."
       />
 
-      <div className="mt-16 grid gap-8 lg:grid-cols-[1.6fr_1fr]">
+      <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-[1.6fr_1fr]">
         <Reveal>
           <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
             <table className="w-full min-w-[34rem] text-left text-sm">
@@ -54,7 +55,7 @@ export function ScheduleSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="flex h-full flex-col rounded-2xl border border-gold-500/30 bg-surface p-8 shadow-gold">
+          <GoldFrame className="h-full" innerClassName="flex h-full flex-col p-8">
             <MapPin className="h-6 w-6 text-gold-700" aria-hidden="true" />
             <h3 className="mt-5 text-2xl">Unser Saal</h3>
             <address className="mt-4 text-sm not-italic leading-relaxed text-ink/80">
@@ -77,7 +78,7 @@ export function ScheduleSection() {
               Route in Google Maps
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
             </a>
-          </div>
+          </GoldFrame>
         </Reveal>
       </div>
     </Section>

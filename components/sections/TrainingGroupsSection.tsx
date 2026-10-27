@@ -12,7 +12,7 @@ export function TrainingGroupsSection() {
         title="Der passende Einstieg für *jedes Alter*"
         description="Unsere Gruppen sind nach Alter und Können gegliedert. So lernt Ihr Kind in einem Tempo, das fordert, ohne zu überfordern."
       />
-      <ul className="mt-16 grid gap-6 lg:grid-cols-3">
+      <ul className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
         {trainingGroups.map((group, index) => (
           <li key={group.id}>
             <Reveal delay={index * 0.08} className="h-full">

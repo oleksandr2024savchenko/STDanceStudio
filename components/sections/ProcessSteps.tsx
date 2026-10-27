@@ -14,7 +14,7 @@ export function ProcessSteps({ steps, as: Heading = "h3", className }: Props) {
     steps.length === 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3";
 
   return (
-    <ol className={cn("grid gap-8", columns, className)}>
+    <ol className={cn("grid grid-cols-1 gap-8", columns, className)}>
       {steps.map((step, index) => (
         <li key={step.title} className="border-t border-gold-500/40 pt-6">
           <span className="font-serif text-4xl text-gold-700">

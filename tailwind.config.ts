@@ -15,11 +15,13 @@ const config: Config = {
     },
     extend: {
       colors: {
-        /** Hintergrund: warmes Elfenbein statt kaltem Klinikweiß. */
+        /** Hintergrund: Palais-Elfenbein statt kaltem Klinikweiß. */
         canvas: {
-          DEFAULT: "#FBF9F5",
-          alt: "#F8F5EE",
+          DEFAULT: "#FDFBF7",
+          alt: "#F9F5EC",
         },
+        /** Messing-/Palastgold für Rahmen, Konturen und Zierrat (immer mit Alpha verwenden). */
+        brass: "#D4AF37",
         /** Karten und Container. */
         surface: "#FFFFFF",
         /** Dünne, warme Rahmen und Trennlinien. */
@@ -50,14 +52,22 @@ const config: Config = {
         eyebrow: "0.28em",
       },
       boxShadow: {
-        cta: "0 4px 20px rgba(197,160,89,0.25)",
+        cta: "inset 0 1px 0 rgba(255,255,255,0.6), 0 6px 22px -4px rgba(212,175,55,0.5)",
+        "cta-hover":
+          "inset 0 1px 0 rgba(255,255,255,0.7), 0 10px 30px -6px rgba(212,175,55,0.6)",
+        /** Warme, voluminöse Tiefe für gerahmte Flächen. */
+        frame:
+          "0 34px 64px -30px rgba(166,124,30,0.5), 0 14px 30px -16px rgba(212,175,55,0.35)",
+        glass: "0 18px 44px -22px rgba(166,124,30,0.35)",
         gold: "0 1px 2px rgba(24,23,22,0.04), 0 18px 44px -20px rgba(179,143,70,0.35)",
         card: "0 1px 2px rgba(24,23,22,0.03), 0 14px 36px -22px rgba(24,23,22,0.18)",
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(135deg, #C5A059 0%, #B38F46 100%)",
+        "gold-gradient":
+          "linear-gradient(135deg, #E8CF7C 0%, #D4AF37 48%, #B8902A 100%)",
+        /** Lichtkegel eines Kristalllüsters: warmes Gold, von der Mitte oben nach unten verlaufend. */
         "hero-glow":
-          "radial-gradient(60% 50% at 50% 0%, rgba(197,160,89,0.16) 0%, rgba(251,249,245,0) 70%)",
+          "radial-gradient(34% 30% at 50% 0%, rgba(255,236,196,0.8) 0%, rgba(255,236,196,0) 100%), radial-gradient(75% 62% at 50% -6%, rgba(218,174,64,0.24) 0%, rgba(230,194,108,0.10) 42%, rgba(253,251,247,0) 74%)",
       },
       keyframes: {
         "fade-up": {

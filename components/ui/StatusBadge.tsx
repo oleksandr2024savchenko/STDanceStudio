@@ -5,16 +5,16 @@ type Props = {
   className?: string;
 };
 
-/** Schmale Statusplakette über Überschriften, z. B. „Wien 1040 • Standard & Latein“. */
+/** Kapselmedaillon über Überschriften, z. B. „Wien 1040 • Standard & Latein“. */
 export function StatusBadge({ children, className }: Props) {
   return (
     <p
       className={cn(
-        "inline-flex items-center gap-2.5 rounded-full border border-stone-300 bg-white/70 px-4 py-1.5 text-xs font-medium tracking-wide text-ink/80",
+        "inline-flex max-w-full items-center gap-3 rounded-full border border-brass/40 px-5 py-2 text-[11px] font-medium uppercase leading-snug tracking-[0.16em] text-gold-700 sm:tracking-[0.22em]",
         className,
       )}
     >
-      <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold-500" />
+      <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rotate-45 bg-brass" />
       {children}
     </p>
   );

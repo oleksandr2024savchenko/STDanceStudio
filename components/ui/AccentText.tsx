@@ -5,7 +5,7 @@ type Props = {
 
 /**
  * Rendert Überschriften mit hervorgehobenen Schlüsselwörtern.
- * Die Markierung `*Wort*` wird zu einem goldenen Kursivakzent mit dezentem Textmarker.
+ * Die Markierung `*Wort*` wird zu einem kursiven Akzent in Goldprägung (Farbverlauf im Text, ohne Fläche dahinter).
  */
 export function AccentText({ text }: Props) {
   return (

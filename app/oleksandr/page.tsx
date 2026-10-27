@@ -118,7 +118,7 @@ export default function OleksandrPage() {
       </Section>
 
       <Section id="baelle">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <SectionHeader
               align="left"

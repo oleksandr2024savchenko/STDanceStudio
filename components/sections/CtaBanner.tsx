@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react";
 import { AccentText } from "@/components/ui/AccentText";
 import { Container } from "@/components/ui/Container";
+import { GoldFrame } from "@/components/ui/GoldFrame";
 import { Ornament } from "@/components/ui/Ornament";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -29,7 +30,7 @@ export function CtaBanner({
     <section id={id} className="scroll-mt-24 py-20 md:py-28">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-gold-500/30 bg-surface px-6 py-16 text-center shadow-gold md:px-16 md:py-20">
+          <GoldFrame innerClassName="px-6 py-16 text-center md:px-16 md:py-20">
             <div className="pointer-events-none absolute inset-0 bg-hero-glow" aria-hidden="true" />
             <div className="relative">
               <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
@@ -57,7 +58,7 @@ export function CtaBanner({
                 </a>
               </div>
             </div>
-          </div>
+          </GoldFrame>
         </Reveal>
       </Container>
     </section>
