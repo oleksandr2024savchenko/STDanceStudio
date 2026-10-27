@@ -53,6 +53,7 @@ export default function HomePage() {
       <PricingSection />
       <TrainerTeamSection />
       <FaqSection
+        tanz={6}
         title="Antworten für *Eltern*"
         description="Die wichtigsten Fragen vor dem ersten Training. Weitere beantworten wir gerne persönlich."
         items={clubFaq}

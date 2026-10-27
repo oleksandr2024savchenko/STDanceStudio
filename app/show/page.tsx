@@ -7,17 +7,17 @@ import { PrincipleCards } from "@/components/sections/PrincipleCards";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { ShowRequestSection } from "@/components/sections/ShowRequestSection";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SocialProof } from "@/components/ui/SocialProof";
+import { Tanzkarte } from "@/components/ui/Tanzkarte";
 import {
   showBenefits,
   showFacts,
   showFaq,
   showProcess,
-  showServices,
+  showProgram,
 } from "@/lib/content/show";
 import { buildServiceSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
@@ -74,18 +74,17 @@ export default function ShowPage() {
           title="Choreografien für den *großen Auftritt*"
           description="Vom Eröffnungswalzer eines Paares bis zur großen Formation: Wir choreografieren Balleröffnungen und Einlagen für Wiener Bälle und Galaabende."
         />
-        <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {showServices.map((service, index) => (
-            <li key={service.id}>
-              <Reveal delay={(index % 2) * 0.08} className="h-full">
-                <Card className="h-full">
-                  <h3 className="text-2xl">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted">{service.text}</p>
-                </Card>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
+        <Reveal className="mx-auto mt-16 max-w-3xl">
+          <Tanzkarte
+            title="Programm Ihres Balls"
+            subtitle="Nach Ihrem Motto choreografiert"
+            label="Unsere Leistungen für Ihre Veranstaltung"
+            sections={showProgram}
+          />
+          <p className="mt-6 text-center text-sm text-muted">
+            Welche Nummern auf Ihrer Tanzkarte stehen, entscheiden wir gemeinsam mit Ihnen.
+          </p>
+        </Reveal>
       </Section>
 
       <Section id="vorteile" className="bg-canvas-alt">

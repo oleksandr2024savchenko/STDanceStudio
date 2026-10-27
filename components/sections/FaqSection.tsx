@@ -8,6 +8,7 @@ import type { FaqItem } from "@/lib/content/club";
 type Props = {
   id?: string;
   eyebrow?: string;
+  tanz?: number;
   title: string;
   description?: string;
   items: readonly FaqItem[];
@@ -17,6 +18,7 @@ type Props = {
 export function FaqSection({
   id = "faq",
   eyebrow = "Häufige Fragen",
+  tanz,
   title,
   description,
   items,
@@ -36,7 +38,7 @@ export function FaqSection({
   return (
     <Section id={id} className={className}>
       <JsonLd data={schema} />
-      <SectionHeader eyebrow={eyebrow} title={title} description={description} />
+      <SectionHeader eyebrow={eyebrow} tanz={tanz} title={title} description={description} />
       <Reveal className="mx-auto mt-14 max-w-3xl divide-y divide-line border-y border-line">
         {items.map((item) => (
           <details key={item.question} className="group py-6">

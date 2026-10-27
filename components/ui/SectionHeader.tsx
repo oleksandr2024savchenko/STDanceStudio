@@ -5,6 +5,8 @@ import { Reveal } from "./Reveal";
 
 type Props = {
   eyebrow?: string;
+  /** Nummer des „Tanzes“ im Programm des Abends; erscheint vor dem Eyebrow. */
+  tanz?: number;
   /** Hervorhebungen mit `*Wort*` markieren. */
   title: string;
   description?: string;
@@ -15,6 +17,7 @@ type Props = {
 
 export function SectionHeader({
   eyebrow,
+  tanz,
   title,
   description,
   align = "center",
@@ -29,8 +32,21 @@ export function SectionHeader({
         className,
       )}
     >
-      {eyebrow && (
-        <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
+      {(eyebrow || tanz) && (
+        <p
+          className={cn(
+            "mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-eyebrow text-gold-700",
+            align === "center" ? "justify-center" : "justify-start",
+          )}
+        >
+          {tanz && (
+            <>
+              <span className="font-serif text-lg normal-case italic tracking-normal">
+                Tanz {tanz}
+              </span>
+              <span aria-hidden="true" className="h-1 w-1 rotate-45 bg-brass" />
+            </>
+          )}
           {eyebrow}
         </p>
       )}

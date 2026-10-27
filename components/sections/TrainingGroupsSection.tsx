@@ -9,6 +9,7 @@ export function TrainingGroupsSection() {
     <Section id="training" className="bg-canvas-alt">
       <SectionHeader
         eyebrow="Kinder- & Jugendtraining"
+        tanz={2}
         title="Der passende Einstieg für *jedes Alter*"
         description="Unsere Gruppen sind nach Alter und Können gegliedert. So lernt Ihr Kind in einem Tempo, das fordert, ohne zu überfordern."
       />

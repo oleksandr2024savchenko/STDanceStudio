@@ -1,5 +1,6 @@
 import { Crown, Footprints, MapPin, Music, Sparkles, Trophy, Users } from "lucide-react";
 import type { Fact } from "@/components/sections/FactsDock";
+import type { TanzkarteSection } from "@/components/ui/Tanzkarte";
 import type { Principle } from "@/components/sections/PrincipleCards";
 import { site } from "@/lib/site";
 import type { FaqItem } from "./club";
@@ -30,6 +31,21 @@ export const showServices: readonly ShowService[] = [
     id: "formation",
     title: "Vom Paar zur Formation",
     text: "Paar, Gruppe oder große Formation: Choreografie und Probenplan wachsen mit der Größe Ihres Auftritts.",
+  },
+];
+
+function programEntries(ids: readonly string[]) {
+  return showServices
+    .filter((service) => ids.includes(service.id))
+    .map(({ title, text }) => ({ title, text }));
+}
+
+/** Die Leistungen als Programmfolge eines Balles: erst die Eröffnung, dann der Abend. */
+export const showProgram: readonly TanzkarteSection[] = [
+  { heading: "Zur Eröffnung", entries: programEntries(["ballroeffnung", "komitee"]) },
+  {
+    heading: "Im Laufe des Abends",
+    entries: programEntries(["mitternachtseinlage", "formation"]),
   },
 ];
 

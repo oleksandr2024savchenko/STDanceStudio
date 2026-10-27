@@ -12,6 +12,7 @@ export function TrainerTeamSection() {
     <Section id="trainerteam" className="bg-canvas-alt">
       <SectionHeader
         eyebrow="Trainerteam"
+        tanz={5}
         title="Zwei Persönlichkeiten, *eine Haltung*"
         description="Hinter ST Dance Studio stehen zwei Trainer mit klaren Schwerpunkten. Für Erwachsene und Paare bieten beide zusätzlich persönliches Coaching an."
       />

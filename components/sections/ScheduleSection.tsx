@@ -3,6 +3,7 @@ import { GoldFrame } from "@/components/ui/GoldFrame";
 import { Reveal } from "@/components/ui/Reveal";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Tanzkarte, type TanzkarteSection } from "@/components/ui/Tanzkarte";
 import { schedule } from "@/lib/content/club";
 import { site } from "@/lib/site";
 
@@ -11,47 +12,36 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   `${address.street}, ${address.postalCode} ${address.city}`,
 )}`;
 
+/** Stundenplan nach Wochentagen gruppiert, in der Reihenfolge der Daten. */
+const scheduleSections: readonly TanzkarteSection[] = schedule.reduce<TanzkarteSection[]>(
+  (groups, entry) => {
+    const entryItem = { title: entry.group, note: entry.age, meta: entry.time };
+    const last = groups[groups.length - 1];
+    if (last?.heading === entry.day) {
+      return [...groups.slice(0, -1), { heading: entry.day, entries: [...last.entries, entryItem] }];
+    }
+    return [...groups, { heading: entry.day, entries: [entryItem] }];
+  },
+  [],
+);
+
 export function ScheduleSection() {
   return (
     <Section id="stundenplan">
       <SectionHeader
         eyebrow="Stundenplan & Saal"
+        tanz={3}
         title="Wöchentlich in der *Favoritenstraße*"
         description="Alle Gruppen trainieren in unserem Saal im 4. Wiener Gemeindebezirk – gut erreichbar und ruhig gelegen."
       />
 
       <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-[1.6fr_1fr]">
         <Reveal>
-          <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
-            <table className="w-full min-w-[34rem] text-left text-sm">
-              <caption className="sr-only">
-                Wöchentlicher Stundenplan der Kinder- und Jugendgruppen
-              </caption>
-              <thead className="border-b border-line text-xs uppercase tracking-wider text-muted">
-                <tr>
-                  <th scope="col" className="px-6 py-4 font-medium">Tag</th>
-                  <th scope="col" className="px-6 py-4 font-medium">Zeit</th>
-                  <th scope="col" className="px-6 py-4 font-medium">Gruppe</th>
-                  <th scope="col" className="px-6 py-4 font-medium">Alter</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-line">
-                {schedule.map((entry) => (
-                  <tr
-                    key={`${entry.day}-${entry.time}`}
-                    className="transition-colors hover:bg-canvas-alt/60"
-                  >
-                    <th scope="row" className="px-6 py-4 font-serif text-lg font-medium text-ink">
-                      {entry.day}
-                    </th>
-                    <td className="whitespace-nowrap px-6 py-4 text-gold-700">{entry.time}</td>
-                    <td className="px-6 py-4 text-ink">{entry.group}</td>
-                    <td className="px-6 py-4 text-muted">{entry.age}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <Tanzkarte
+            subtitle="Wochenplan der Gruppen"
+            label="Wöchentlicher Stundenplan der Kinder- und Jugendgruppen"
+            sections={scheduleSections}
+          />
         </Reveal>
 
         <Reveal delay={0.1}>

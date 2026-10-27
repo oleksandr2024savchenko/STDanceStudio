@@ -17,7 +17,9 @@ export function SchnuppertrainingSection() {
     <Section id="schnuppertraining" className="bg-hero-glow">
       <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <p className="mb-4 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
+          <p className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium uppercase tracking-eyebrow text-gold-700">
+            <span className="font-serif text-lg normal-case italic tracking-normal">Tanz 7</span>
+            <span aria-hidden="true" className="h-1 w-1 rotate-45 bg-brass" />
             Anmeldung & Schnuppertraining
           </p>
           <h2 className="text-4xl leading-[1.1] md:text-5xl">

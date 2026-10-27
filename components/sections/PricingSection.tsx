@@ -8,6 +8,7 @@ export function PricingSection() {
     <Section id="preise" className="bg-canvas-alt">
       <SectionHeader
         eyebrow="Modelle & Preise"
+        tanz={4}
         title="*Transparent* und flexibel"
         description="Wählen Sie zwischen dem Semesterkurs mit festem Termin und dem flexiblen 10er-Block. Das erste Schnuppertraining ist kostenlos und unverbindlich."
       />
