@@ -13,7 +13,9 @@ import { BASE_PATH, mainNav, site } from "@/lib/site";
 
 function isActive(pathname: string, href: string): boolean {
   if (href === "/") return pathname === "/";
-  if (href === "/weitere-leistungen" && pathname.startsWith("/hochzeitstanz")) return true;
+  if (href === "/alle-leistungen") {
+    return ["/alle-leistungen", "/show", "/hochzeitstanz"].some((path) => pathname.startsWith(path));
+  }
   return pathname.startsWith(href);
 }
 

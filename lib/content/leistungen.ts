@@ -3,7 +3,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export type ExtraService = {
   id: string;
-  icon: "crown" | "music" | "heart";
+  icon: "crown" | "music";
   eyebrow: string;
   title: string;
   teaser: string;
@@ -67,21 +67,42 @@ export const extraServices: readonly ExtraService[] = [
       external: true,
     },
   },
+];
+
+
+export type FeaturedService = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  text: string;
+  bullets: readonly string[];
+  image: { src: string; alt: string };
+  cta: { label: string; href: string };
+};
+
+export const featuredServices: readonly FeaturedService[] = [
+  {
+    id: "show",
+    eyebrow: "Für Bälle & Galaabende",
+    title: "Show & Balleröffnungen",
+    text: "Balleröffnung, Mitternachtseinlage oder große Formation: Wir choreografieren Ihren Auftritt und studieren ihn mit Ihrem Komitee ein – auch ohne Tanzerfahrung.",
+    bullets: ["Balleröffnung & Eröffnungswalzer", "Mitternachtseinlagen & Formationen", "Persönlich betreut von Oleksandr und Tetiana"],
+    image: {
+      src: "/images/hero-ballroom.jpg",
+      alt: "Tanzpaar in klassischer Standardhaltung auf einem Parkettboden in einem hellen Wiener Saal",
+    },
+    cta: { label: "Zu Show & Balleröffnungen", href: "/show" },
+  },
   {
     id: "hochzeitstanz",
-    icon: "heart",
     eyebrow: "Für Brautpaare",
     title: "Hochzeitstanz",
-    teaser: "Ihr erster Tanz als Ehepaar – Express in 4 Einheiten oder Komplettchoreografie.",
-    paragraphs: [
-      "Wir studieren Ihren Hochzeitswalzer oder Ihren Wunschtanz ein – auch ohne Tanzerfahrung. Sie wählen zwischen dem Express-Paket in vier Einheiten und einer individuellen Komplettchoreografie zu Ihrem Lieblingslied.",
-    ],
-    bullets: [
-      "Express in 4 Einheiten oder Komplettpaket",
-      "Choreografie zu Ihrer Wunschmusik",
-      "Persönlich betreut von Oleksandr",
-    ],
+    text: "Ihr erster Tanz als Ehepaar: Wir studieren Ihren Hochzeitswalzer ein – als Express in vier Einheiten oder als individuelle Komplettchoreografie zu Ihrem Lieblingslied.",
+    bullets: ["Express in 4 Einheiten oder Komplettpaket", "Auch ohne Tanzerfahrung geeignet", "Choreografie zu Ihrer Wunschmusik"],
+    image: {
+      src: "/images/hero-wedding.jpg",
+      alt: "Brautpaar beim ersten Tanz in einem hellen Saal mit hohen Fenstern und Parkettboden",
+    },
     cta: { label: "Zum Hochzeitstanz", href: "/hochzeitstanz" },
   },
 ];
-

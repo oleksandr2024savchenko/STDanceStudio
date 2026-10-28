@@ -1,12 +1,12 @@
 "use client";
 
-import { Check, ChevronDown, Crown, Heart, Music } from "lucide-react";
+import { Check, ChevronDown, Crown, Music } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import type { ExtraService } from "@/lib/content/leistungen";
 
-const icons = { crown: Crown, music: Music, heart: Heart } as const;
+const icons = { crown: Crown, music: Music } as const;
 
 type Props = { items: readonly ExtraService[] };
 
