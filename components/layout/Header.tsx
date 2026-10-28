@@ -70,24 +70,14 @@ export function Header() {
           <Image
             src={`${BASE_PATH}/images/logo-mark.png`}
             alt=""
-            width={531}
-            height={527}
+            width={505}
+            height={604}
             priority
             className={cn(
               "w-auto transition-[height] duration-300",
-              compact ? "h-10 lg:h-12" : "h-11 lg:h-[72px] xl:h-20",
+              compact ? "h-14 lg:h-16" : "h-16 lg:h-28 xl:h-32",
             )}
           />
-          <span
-            className={cn(
-              "whitespace-nowrap font-medium uppercase text-gold-700 transition-all duration-300",
-              compact
-                ? "mt-1 text-[9px] tracking-[0.2em] lg:tracking-[0.25em]"
-                : "mt-1.5 text-[10px] tracking-[0.2em] lg:text-[11px] lg:tracking-[0.25em]",
-            )}
-          >
-            Dance Studio
-          </span>
         </Link>
 
         <div className="col-start-3 flex items-center gap-1 justify-self-end max-lg:contents lg:gap-3">

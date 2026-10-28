@@ -5,10 +5,10 @@ import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/lib/cn";
 
 const languages = [
-  { code: "DE", label: "Deutsch" },
-  { code: "EN", label: "English" },
-  { code: "UK", label: "Українська" },
-  { code: "RU", label: "Русский" },
+  { code: "DE", label: "Deutsch", word: "Sprache" },
+  { code: "EN", label: "English", word: "Language" },
+  { code: "UK", label: "Українська", word: "Мова" },
+  { code: "RU", label: "Русский", word: "Язык" },
 ] as const;
 
 /**
@@ -18,6 +18,7 @@ const languages = [
 export function LanguageSwitcher({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<(typeof languages)[number]["code"]>("DE");
+  const word = languages.find((l) => l.code === current)?.word ?? "Sprache";
   const rootRef = useRef<HTMLDivElement>(null);
   const listId = useId();
 
@@ -44,11 +45,11 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls={listId}
-        aria-label="Sprache wählen"
+        aria-label={word}
         onClick={() => setOpen((v) => !v)}
         className="inline-flex items-center gap-1.5 rounded-[2px] px-1.5 py-2 text-[13px] font-normal tracking-[0.06em] text-[#3A3835] transition-colors hover:text-gold-700 sm:px-2.5 xl:text-sm xl:tracking-[0.08em]"
       >
-        <span>Sprache</span>
+        <span>{word}</span>
         <ChevronDown
           aria-hidden="true"
           className={cn("hidden h-3.5 w-3.5 transition-transform duration-200 min-[360px]:block", open && "rotate-180")}
@@ -59,7 +60,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         <ul
           id={listId}
           role="listbox"
-          aria-label="Sprache"
+          aria-label={word}
           className="absolute left-0 top-full lg:left-auto lg:right-0 z-50 mt-2 min-w-[11rem] rounded-[2px] border border-line bg-surface py-1 shadow-card"
         >
           {languages.map((lang) => {
