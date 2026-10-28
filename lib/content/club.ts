@@ -101,7 +101,7 @@ export const schedule: readonly ScheduleEntry[] = [
 ];
 
 export type TeamProfile = {
-  id: "oleksandr" | "tania";
+  id: "oleksandr" | "tetiana";
   summary: string;
   tags: readonly string[];
 };
@@ -114,7 +114,7 @@ export const teamProfiles: readonly TeamProfile[] = [
     tags: ["Turniercoaching", "Pro-Am", "Taxitänzer", "Hochzeitstanz"],
   },
   {
-    id: "tania",
+    id: "tetiana",
     summary:
       "Stretching und Body Conditioning für Erwachsene, Solo-Latin, Turniervorbereitung sowie Pro-Am-Begleitung für Herren auf dem Ballparkett.",
     tags: ["Stretching", "Solo-Latin", "Turniervorbereitung", "Pro-Am"],

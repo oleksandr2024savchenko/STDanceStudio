@@ -21,29 +21,29 @@ import {
   soloLatinDances,
   stretchingBenefits,
   stretchingFacts,
-  taniaFaq,
-  taniaMessages,
-  taniaPackages,
-  taniaPrinciples,
-  taniaServices,
+  tetianaFaq,
+  tetianaMessages,
+  tetianaPackages,
+  tetianaPrinciples,
+  tetianaServices,
   turnierBenefits,
   turnierSteps,
-} from "@/lib/content/tania";
+} from "@/lib/content/tetiana";
 import { buildTrainerSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { trainers } from "@/lib/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
-const trainer = trainers.tania;
+const trainer = trainers.tetiana;
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Tania – Stretching, Solo-Latin & Turniervorbereitung in Wien",
+  title: "Tetiana – Stretching, Solo-Latin & Turniervorbereitung in Wien",
   description:
     "Stretching & Body Conditioning für Erwachsene, Solo-Latin, Turniervorbereitung und Pro-Am-Begleitung für Herren auf Wiener Bällen. Termin direkt per WhatsApp vereinbaren.",
-  path: "/tania",
+  path: "/tetiana",
 });
 
-export default function TaniaPage() {
+export default function TetianaPage() {
   return (
     <>
       <JsonLd
@@ -72,7 +72,7 @@ export default function TaniaPage() {
           <>
             <WhatsAppButton
               phone={trainer.phone}
-              message={taniaMessages.general}
+              message={tetianaMessages.general}
               label="Termin per WhatsApp anfragen"
             />
             <Button href="#angebot" size="lg" variant="outline">
@@ -100,7 +100,7 @@ export default function TaniaPage() {
           description="Körper, Bewegung und Auftritt: Wählen Sie den Schwerpunkt, der zu Ihnen passt, oder kombinieren Sie mehrere."
         />
         <div className="mt-16">
-          <ServiceGrid services={taniaServices} />
+          <ServiceGrid services={tetianaServices} />
         </div>
       </Section>
 
@@ -139,7 +139,7 @@ export default function TaniaPage() {
               </dl>
               <WhatsAppButton
                 phone={trainer.phone}
-                message={taniaMessages.stretching}
+                message={tetianaMessages.stretching}
                 label="Stretching-Termin anfragen"
                 className="mt-8 w-full"
               />
@@ -169,7 +169,7 @@ export default function TaniaPage() {
               </p>
               <WhatsAppButton
                 phone={trainer.phone}
-                message={taniaMessages.soloLatin}
+                message={tetianaMessages.soloLatin}
                 label="Solo-Latin anfragen"
                 variant="outline"
                 className="mt-8 w-full"
@@ -237,7 +237,7 @@ export default function TaniaPage() {
               </ol>
               <WhatsAppButton
                 phone={trainer.phone}
-                message={taniaMessages.turnier}
+                message={tetianaMessages.turnier}
                 label="Turniervorbereitung anfragen"
                 className="mt-8 w-full"
               />
@@ -258,7 +258,7 @@ export default function TaniaPage() {
         <Reveal className="mt-14 flex justify-center">
           <WhatsAppButton
             phone={trainer.phone}
-            message={taniaMessages.proAm}
+            message={tetianaMessages.proAm}
             label="Pro-Am-Anfrage senden"
           />
         </Reveal>
@@ -267,7 +267,7 @@ export default function TaniaPage() {
       <Section id="ansatz" className="bg-canvas-alt">
         <SectionHeader eyebrow="Mein Ansatz" title="Bewegung, die *Ihnen guttut*" />
         <div className="mt-16">
-          <PrincipleCards principles={taniaPrinciples} />
+          <PrincipleCards principles={tetianaPrinciples} />
         </div>
       </Section>
 
@@ -278,7 +278,7 @@ export default function TaniaPage() {
           description="Für Paare, Gruppen oder besondere Anlässe stelle ich Ihnen gerne ein individuelles Angebot zusammen."
         />
         <div className="mt-16">
-          <PackageCards packages={taniaPackages} />
+          <PackageCards packages={tetianaPackages} />
         </div>
         <p className="mt-8 text-center text-xs text-muted">
           Alle Preise in Euro. Pro-Am-Honorare richten sich nach Anlass und Aufwand.
@@ -289,7 +289,7 @@ export default function TaniaPage() {
         className="bg-canvas-alt"
         title="Fragen vor Ihrer *ersten Einheit*"
         description="Weitere Fragen beantworte ich gerne im persönlichen Gespräch."
-        items={taniaFaq}
+        items={tetianaFaq}
       />
 
       <CtaBanner
@@ -297,10 +297,10 @@ export default function TaniaPage() {
         title="Vereinbaren Sie Ihren *ersten Termin*"
         description="Schreiben Sie mir direkt per WhatsApp: kurz Ihr Anliegen und Ihr Wunschzeitraum. Ich melde mich persönlich bei Ihnen."
         whatsappLabel="Jetzt per WhatsApp schreiben"
-        message={taniaMessages.general}
+        message={tetianaMessages.general}
       />
 
-      <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, taniaMessages.general)} />
+      <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, tetianaMessages.general)} />
     </>
   );
 }

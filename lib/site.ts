@@ -23,7 +23,7 @@ export const site = {
 } as const;
 
 export type Trainer = {
-  id: "oleksandr" | "tania";
+  id: "oleksandr" | "tetiana";
   name: string;
   role: string;
   href: string;
@@ -43,15 +43,15 @@ export const trainers: Record<Trainer["id"], Trainer> = {
     whatsappGreeting:
       "Guten Tag Oleksandr, ich interessiere mich für Ihr Training und bitte um Rückmeldung.",
   },
-  tania: {
-    id: "tania",
-    name: "Tania",
+  tetiana: {
+    id: "tetiana",
+    name: "Tetiana",
     role: "Stretching, Latin & Turniervorbereitung",
-    href: "/tania",
+    href: "/tetiana",
     phone: "+4367764802096",
     phoneDisplay: "+43 677 64802096",
     whatsappGreeting:
-      "Guten Tag Tania, ich interessiere mich für Ihr Training und bitte um Rückmeldung.",
+      "Guten Tag Tetiana, ich interessiere mich für Ihr Training und bitte um Rückmeldung.",
   },
 };
 
@@ -65,7 +65,7 @@ export const legalNav: readonly NavItem[] = [
 export const mainNav: readonly NavItem[] = [
   { label: "Club", href: "/" },
   { label: "Oleksandr", href: "/oleksandr" },
-  { label: "Tania", href: "/tania" },
+  { label: "Tetiana", href: "/tetiana" },
   { label: "Hochzeitstanz", href: "/hochzeitstanz" },
   { label: "Show", href: "/show" },
 ];

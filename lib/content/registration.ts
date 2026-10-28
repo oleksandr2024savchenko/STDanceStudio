@@ -32,19 +32,19 @@ export const UNSURE_OFFER: RegistrationOffer = {
   label: "Noch unsicher – bitte um Beratung",
 };
 
-const taniaOffers = {
+const tetianaOffers = {
   stretching: {
     value: "Stretching & Body Conditioning",
     label: "Stretching & Body Conditioning",
-    trainer: "tania",
+    trainer: "tetiana",
   },
-  soloLatin: { value: "Solo-Latin", label: "Solo-Latin", trainer: "tania" },
+  soloLatin: { value: "Solo-Latin", label: "Solo-Latin", trainer: "tetiana" },
   turnier: {
     value: "Turniervorbereitung",
     label: "Turniervorbereitung",
-    trainer: "tania",
+    trainer: "tetiana",
   },
-  proAm: { value: "Pro-Am für Herren", label: "Pro-Am für Herren", trainer: "tania" },
+  proAm: { value: "Pro-Am für Herren", label: "Pro-Am für Herren", trainer: "tetiana" },
 } as const satisfies Record<string, RegistrationOffer>;
 
 /** Auswahlmöglichkeiten je nach Teilnehmerkreis, gruppiert für das Dropdown. */
@@ -61,12 +61,12 @@ export const offerGroups: Record<AudienceId, readonly RegistrationOfferGroup[]> 
   ],
   erwachsene: [
     {
-      label: "Bei Tania",
+      label: "Bei Tetiana",
       offers: [
-        taniaOffers.stretching,
-        taniaOffers.soloLatin,
-        taniaOffers.turnier,
-        taniaOffers.proAm,
+        tetianaOffers.stretching,
+        tetianaOffers.soloLatin,
+        tetianaOffers.turnier,
+        tetianaOffers.proAm,
       ],
     },
     {
@@ -113,8 +113,8 @@ export const offerGroups: Record<AudienceId, readonly RegistrationOfferGroup[]> 
       ],
     },
     {
-      label: "Bei Tania",
-      offers: [taniaOffers.turnier],
+      label: "Bei Tetiana",
+      offers: [tetianaOffers.turnier],
     },
     { label: "Weiteres", offers: [UNSURE_OFFER] },
   ],

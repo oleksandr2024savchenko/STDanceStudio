@@ -58,7 +58,7 @@ export default function ShowPage() {
         }
         proof={
           <SocialProof>
-            Persönlich betreut von Oleksandr und Tania – auch für Komitees ohne Tanzerfahrung
+            Persönlich betreut von Oleksandr und Tetiana – auch für Komitees ohne Tanzerfahrung
           </SocialProof>
         }
         media={{

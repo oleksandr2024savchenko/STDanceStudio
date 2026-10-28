@@ -7,22 +7,22 @@ import { trainers } from "@/lib/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import type { FaqItem } from "./club";
 
-const phone = trainers.tania.phone;
+const phone = trainers.tetiana.phone;
 
-export const taniaMessages = {
+export const tetianaMessages = {
   general:
-    "Guten Tag Tania, ich interessiere mich für Ihr Training und bitte um einen Terminvorschlag.",
+    "Guten Tag Tetiana, ich interessiere mich für Ihr Training und bitte um einen Terminvorschlag.",
   stretching:
-    "Guten Tag Tania, ich möchte mich für Stretching & Body Conditioning anmelden. Bitte um einen Terminvorschlag.\n\nEinzelstunde oder Kleingruppe:\nWunschzeitraum:",
+    "Guten Tag Tetiana, ich möchte mich für Stretching & Body Conditioning anmelden. Bitte um einen Terminvorschlag.\n\nEinzelstunde oder Kleingruppe:\nWunschzeitraum:",
   soloLatin:
-    "Guten Tag Tania, ich interessiere mich für Solo-Latin. Bitte um einen Terminvorschlag für eine erste Einheit.",
+    "Guten Tag Tetiana, ich interessiere mich für Solo-Latin. Bitte um einen Terminvorschlag für eine erste Einheit.",
   turnier:
-    "Guten Tag Tania, ich interessiere mich für die Turniervorbereitung. Bitte um einen Terminvorschlag.\n\nTurnier / Datum:\nDisziplin (z. B. Latein, Solo-Latin, Pro-Am):\nBisherige Turniererfahrung:",
+    "Guten Tag Tetiana, ich interessiere mich für die Turniervorbereitung. Bitte um einen Terminvorschlag.\n\nTurnier / Datum:\nDisziplin (z. B. Latein, Solo-Latin, Pro-Am):\nBisherige Turniererfahrung:",
   proAm:
-    "Guten Tag Tania, ich interessiere mich für Pro-Am-Begleitung auf dem Ballparkett bzw. beim Turnier.\n\nAnlass / Ball:\nDatum:",
+    "Guten Tag Tetiana, ich interessiere mich für Pro-Am-Begleitung auf dem Ballparkett bzw. beim Turnier.\n\nAnlass / Ball:\nDatum:",
 } as const;
 
-export const taniaServices: readonly ServiceItem[] = [
+export const tetianaServices: readonly ServiceItem[] = [
   {
     id: "stretching",
     title: "Stretching & Body Conditioning",
@@ -139,7 +139,7 @@ export const proAmSteps: readonly ProcessStep[] = [
   },
 ];
 
-export const taniaPrinciples: readonly Principle[] = [
+export const tetianaPrinciples: readonly Principle[] = [
   {
     title: "Anmut",
     text: "Schönheit der Bewegung entsteht aus Technik und Ruhe. Ich zeige Ihnen, wie Sie beides verbinden.",
@@ -157,7 +157,7 @@ export const taniaPrinciples: readonly Principle[] = [
   },
 ];
 
-export const taniaPackages: readonly PackageItem[] = [
+export const tetianaPackages: readonly PackageItem[] = [
   {
     id: "stretching-einzel",
     name: "Stretching-Einzelstunde",
@@ -172,7 +172,7 @@ export const taniaPackages: readonly PackageItem[] = [
     ],
     cta: {
       label: "Termin anfragen",
-      href: buildWhatsAppUrl(phone, taniaMessages.stretching),
+      href: buildWhatsAppUrl(phone, tetianaMessages.stretching),
       external: true,
     },
   },
@@ -192,7 +192,7 @@ export const taniaPackages: readonly PackageItem[] = [
     badge: "Beliebt",
     cta: {
       label: "10er-Block anfragen",
-      href: buildWhatsAppUrl(phone, taniaMessages.stretching),
+      href: buildWhatsAppUrl(phone, tetianaMessages.stretching),
       external: true,
     },
   },
@@ -211,13 +211,13 @@ export const taniaPackages: readonly PackageItem[] = [
     ],
     cta: {
       label: "Angebot anfragen",
-      href: buildWhatsAppUrl(phone, taniaMessages.general),
+      href: buildWhatsAppUrl(phone, tetianaMessages.general),
       external: true,
     },
   },
 ];
 
-export const taniaFaq: readonly FaqItem[] = [
+export const tetianaFaq: readonly FaqItem[] = [
   {
     question: "Ist Stretching für mich geeignet, wenn ich sehr unbeweglich bin?",
     answer:

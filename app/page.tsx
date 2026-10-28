@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FactsDock } from "@/components/sections/FactsDock";
 import { Hero } from "@/components/sections/Hero";
@@ -47,6 +48,7 @@ export default function HomePage() {
         }}
       />
       <FactsDock facts={clubFacts} label="Ihre Vorteile im Überblick" />
+      <AboutSection />
       <ValuesSection />
       <TrainingGroupsSection />
       <ScheduleSection />
