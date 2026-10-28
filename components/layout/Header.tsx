@@ -33,7 +33,7 @@ export function Header() {
       <div
         className={cn(
           "container grid grid-cols-[1fr_auto_1fr] items-center gap-2 transition-[padding] sm:gap-4 duration-300",
-          compact ? "py-2.5" : "py-3 lg:py-5 xl:py-6",
+          compact ? "py-1.5 lg:py-2.5" : "py-3 lg:py-5 xl:py-6",
         )}
       >
         <nav
@@ -75,7 +75,7 @@ export function Header() {
             priority
             className={cn(
               "w-auto transition-[height] duration-300",
-              compact ? "h-16 lg:h-20" : "h-[72px] lg:h-36 xl:h-40",
+              compact ? "h-14 lg:h-20" : "h-24 sm:h-28 lg:h-36 xl:h-40",
             )}
           />
         </Link>
