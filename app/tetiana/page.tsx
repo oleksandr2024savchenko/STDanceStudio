@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { TrainerAboutSection } from "@/components/sections/TrainerAboutSection";
 import { CtaBanner } from "@/components/sections/CtaBanner";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { PackageCards } from "@/components/sections/PackageCards";
@@ -29,6 +30,7 @@ import {
   turnierBenefits,
   turnierSteps,
 } from "@/lib/content/tetiana";
+import { tetianaAbout } from "@/lib/content/about";
 import { buildTrainerSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { trainers } from "@/lib/site";
@@ -92,6 +94,8 @@ export default function TetianaPage() {
           note: "Training im ST Dance Studio, Favoritenstraße 27a, 1040 Wien – Termine nach Vereinbarung.",
         }}
       />
+
+      <TrainerAboutSection name="Tetiana" about={tetianaAbout} className="bg-canvas-alt" />
 
       <Section id="angebot">
         <SectionHeader
