@@ -9,10 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: item.href === "/" ? 1 : 0.8,
   }));
+  const extra = [{
+    url: `${SITE_URL}/hochzeitstanz`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }];
   const legal = legalNav.map((item) => ({
     url: `${SITE_URL}${item.href}`,
     changeFrequency: "yearly" as const,
     priority: 0.2,
   }));
-  return [...pages, ...legal];
+  return [...pages, ...extra, ...legal];
 }

@@ -12,7 +12,9 @@ import { cn } from "@/lib/cn";
 import { BASE_PATH, mainNav, site } from "@/lib/site";
 
 function isActive(pathname: string, href: string): boolean {
-  return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  if (href === "/") return pathname === "/";
+  if (href === "/weitere-leistungen" && pathname.startsWith("/hochzeitstanz")) return true;
+  return pathname.startsWith(href);
 }
 
 export function Header() {
@@ -49,7 +51,7 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "px-2.5 py-2 text-[13px] font-normal tracking-[0.06em] transition-colors xl:px-4 xl:text-sm xl:tracking-[0.08em]",
+                      "whitespace-nowrap px-2 py-2 text-[12.5px] font-normal tracking-[0.04em] transition-colors min-[1100px]:px-2.5 min-[1100px]:text-[13px] min-[1100px]:tracking-[0.06em] xl:px-4 xl:text-sm xl:tracking-[0.08em]",
                       active ? "text-gold-700" : "text-[#3A3835] hover:text-gold-500",
                     )}
                   >

@@ -66,6 +66,6 @@ export const mainNav: readonly NavItem[] = [
   { label: "Club", href: "/" },
   { label: "Oleksandr", href: "/oleksandr" },
   { label: "Tetiana", href: "/tetiana" },
-  { label: "Hochzeitstanz", href: "/hochzeitstanz" },
   { label: "Show", href: "/show" },
+  { label: "Weitere Leistungen", href: "/weitere-leistungen" },
 ];
