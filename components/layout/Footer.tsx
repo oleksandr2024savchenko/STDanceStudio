@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { legalNav, mainNav, site, trainers } from "@/lib/site";
+import { BASE_PATH, legalNav, mainNav, site, trainers } from "@/lib/site";
 import { buildTelUrl } from "@/lib/whatsapp";
 
 export function Footer() {
@@ -14,9 +15,13 @@ export function Footer() {
       />
       <div className="container grid grid-cols-1 gap-12 py-16 md:grid-cols-3">
         <div>
-          <p className="font-serif text-2xl text-ink">
-            ST <span className="text-gold-700">Dance</span> Studio
-          </p>
+          <Image
+            src={`${BASE_PATH}/images/st-dance-studio-logo.png`}
+            alt={site.name}
+            width={510}
+            height={610}
+            className="h-32 w-auto"
+          />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
             {site.tagline}
           </p>

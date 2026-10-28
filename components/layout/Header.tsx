@@ -68,14 +68,14 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src={`${BASE_PATH}/images/logo-mark.png`}
-            alt=""
-            width={505}
-            height={604}
+            src={`${BASE_PATH}/images/st-dance-studio-logo.png`}
+            alt={site.name}
+            width={510}
+            height={610}
             priority
             className={cn(
               "w-auto transition-[height] duration-300",
-              compact ? "h-14 lg:h-16" : "h-16 lg:h-28 xl:h-32",
+              compact ? "h-16 lg:h-20" : "h-[72px] lg:h-36 xl:h-40",
             )}
           />
         </Link>
