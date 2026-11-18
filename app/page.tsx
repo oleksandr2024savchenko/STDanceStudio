@@ -43,7 +43,7 @@ export default function HomePage() {
           </SocialProof>
         }
         media={{
-          src: "/images/hero-ballroom.jpg",
+          src: "/images/hero-ballroom.webp",
           alt: "Tanzpaar in klassischer Standardhaltung auf einem Parkettboden in einem hellen Wiener Saal",
         }}
       />

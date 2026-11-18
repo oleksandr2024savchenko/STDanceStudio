@@ -76,7 +76,7 @@ export function AboutSection() {
 
         <Reveal delay={0.12} className="lg:order-first">
           <MediaFrame
-            src="/images/about-us.jpg"
+            src="/images/about-us.webp"
             alt="Oleksandr und Tetiana beim Tanzen im hellen Trainingssaal"
             aspectClassName="aspect-[2/3]"
             priority={false}

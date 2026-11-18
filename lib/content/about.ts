@@ -1,7 +1,7 @@
 /**
  * „Über mich“-Texte der Trainer. Platzhalter – bitte später durch die echten Texte
  * ersetzen. Das Porträtfoto wird über `photo` eingetragen (Datei unter /public/images/,
- * z. B. { src: "/images/oleksandr.jpg", alt: "Oleksandr im Tanzsaal" }).
+ * z. B. { src: "/images/oleksandr.webp", alt: "Oleksandr im Tanzsaal" }).
  */
 export type TrainerAbout = {
   /** Titel mit `*Hervorhebung*`. */

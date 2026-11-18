@@ -72,10 +72,10 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src={`${BASE_PATH}/images/st-dance-studio-logo.png`}
+            src={`${BASE_PATH}/images/st-dance-studio-logo.webp`}
             alt={site.name}
-            width={510}
-            height={610}
+            width={334}
+            height={400}
             priority
             className={cn(
               "w-auto transition-[height] duration-300",

@@ -61,7 +61,7 @@ export default function HochzeitstanzPage() {
           </SocialProof>
         }
         media={{
-          src: "/images/hero-wedding.jpg",
+          src: "/images/hero-wedding.webp",
           alt: "Brautpaar beim ersten Tanz in einem hellen Saal mit hohen Fenstern und Parkettboden",
         }}
       />

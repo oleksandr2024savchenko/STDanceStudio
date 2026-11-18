@@ -16,10 +16,10 @@ export function Footer() {
       <div className="container grid grid-cols-1 gap-12 py-16 md:grid-cols-3">
         <div>
           <Image
-            src={`${BASE_PATH}/images/st-dance-studio-logo.png`}
+            src={`${BASE_PATH}/images/st-dance-studio-logo.webp`}
             alt={site.name}
-            width={510}
-            height={610}
+            width={334}
+            height={400}
             className="h-32 w-auto"
           />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
