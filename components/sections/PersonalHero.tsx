@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { AccentText } from "@/components/ui/AccentText";
 import { Container } from "@/components/ui/Container";
 import { GoldFrame } from "@/components/ui/GoldFrame";
+import { Ornament } from "@/components/ui/Ornament";
 import { Reveal } from "@/components/ui/Reveal";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
@@ -44,27 +45,24 @@ export function PersonalHero({ badge, title, description, actions, profile, prof
         </Reveal>
 
         <Reveal delay={0.12}>
-          <GoldFrame star>
+          {/* Bogenfenster wie bei den Fotos der übrigen Seiten, damit alle Hero-Bereiche einheitlich wirken. */}
+          <GoldFrame shape="arch" className="mx-auto w-full max-w-md">
             <aside
               aria-label={`Profil ${profile.name}`}
-              className="p-8 md:p-10"
+              className="px-8 pb-10 pt-20 text-center md:px-10 md:pt-24"
             >
-              <div className="flex items-center gap-5">
-                <span
-                  aria-hidden="true"
-                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-[2px] border border-brass/50 bg-canvas-alt font-serif text-5xl text-gold-700"
-                >
-                  {profile.name.charAt(0)}
-                </span>
-                <div>
-                  <p className="font-serif text-3xl text-ink">{profile.name}</p>
-                  <p className="mt-1 text-sm text-gold-700">{profile.role}</p>
-                </div>
-              </div>
-              <ul className="mt-8 divide-y divide-line border-y border-line text-sm text-ink/80">
+              <span
+                aria-hidden="true"
+                className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-brass/50 bg-canvas-alt font-serif text-5xl text-gold-700"
+              >
+                {profile.name.charAt(0)}
+              </span>
+              <p className="mt-6 font-serif text-4xl text-ink">{profile.name}</p>
+              <p className="mt-1 text-sm text-gold-700">{profile.role}</p>
+              <Ornament className="mt-6" />
+              <ul className="mt-6 divide-y divide-line border-y border-line text-sm text-ink/80">
                 {profile.focus.map((item) => (
-                  <li key={item} className="flex items-center gap-3 py-3">
-                    <span className="h-1.5 w-1.5 shrink-0 rotate-45 bg-brass" aria-hidden="true" />
+                  <li key={item} className="py-3">
                     {item}
                   </li>
                 ))}
