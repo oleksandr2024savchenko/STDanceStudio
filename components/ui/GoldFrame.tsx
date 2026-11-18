@@ -40,7 +40,7 @@ export function GoldFrame({
   return (
     <div
       className={cn(
-        "relative border border-[#C5A880]/60 p-[5px] shadow-frame",
+        "relative border border-brass/60 p-[5px] shadow-frame",
         arch ? "rounded-t-[999px] rounded-b-[2px]" : "rounded-[2px]",
         className,
       )}
@@ -48,14 +48,14 @@ export function GoldFrame({
       {star && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 [filter:drop-shadow(0_0_5px_#FAF8F5)_drop-shadow(0_0_5px_#FAF8F5)]"
+          className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 [filter:drop-shadow(0_0_5px_rgb(var(--canvas)))_drop-shadow(0_0_5px_rgb(var(--canvas)))]"
         >
           <Star />
         </span>
       )}
       <div
         className={cn(
-          "relative overflow-hidden border border-[#C5A880]/40 bg-surface",
+          "relative overflow-hidden border border-brass/40 bg-surface",
           arch ? "rounded-t-[999px] rounded-b-[1px]" : "rounded-[1px]",
           innerClassName,
         )}

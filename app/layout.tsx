@@ -48,13 +48,13 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAF8F5",
-  colorScheme: "dark",
+  themeColor: "#FBF9F5",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="de-AT" className={`dark ${sans.variable} ${serif.variable}`}>
+    <html lang="de-AT" className={`${sans.variable} ${serif.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <Header />
         <main className="flex-1">{children}</main>

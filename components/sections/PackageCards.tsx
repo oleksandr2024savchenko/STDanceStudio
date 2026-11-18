@@ -35,7 +35,7 @@ export function PackageCards({ packages, onSelect }: Props) {
           <Reveal delay={index * 0.08} className="h-full">
             <Card highlighted={item.highlighted} className="relative flex h-full flex-col">
               {item.badge && (
-                <span className="absolute -top-3 left-8 rounded-[2px] bg-gold-gradient px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-ink">
+                <span className="absolute -top-3 left-8 rounded-[2px] bg-gold-gradient px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-[#121110]">
                   {item.badge}
                 </span>
               )}

@@ -28,7 +28,7 @@ export function PersonalHero({ badge, title, description, actions, profile }: Pr
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
         <Reveal>
           <StatusBadge>{badge}</StatusBadge>
-          <h1 className="mt-5 text-5xl leading-[1.04] md:text-6xl lg:text-7xl">
+          <h1 className="mt-3 overflow-visible pt-2 text-5xl leading-[1.15] md:text-6xl lg:text-7xl">
             {title.split("\n").map((line) => (
               <span key={line} className="block">
                 <AccentText text={line} />

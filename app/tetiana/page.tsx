@@ -12,6 +12,7 @@ import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
+import { ThemeScope } from "@/components/ui/ThemeScope";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -47,7 +48,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function TetianaPage() {
   return (
-    <>
+    <ThemeScope theme="cashmere">
       <JsonLd
         data={buildTrainerSchema({
           trainer,
@@ -305,6 +306,6 @@ export default function TetianaPage() {
       />
 
       <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, tetianaMessages.general)} />
-    </>
+    </ThemeScope>
   );
 }
