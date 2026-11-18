@@ -38,6 +38,8 @@ type LinkProps = CommonProps & {
   href: string;
   /** Öffnet in neuem Tab (z. B. WhatsApp) */
   external?: boolean;
+  /** Datei herunterladen statt navigieren (z. B. Visitenkarte `.vcf`); Wert = Dateiname. */
+  download?: string;
   onClick?: () => void;
   "aria-label"?: string;
 };
@@ -49,6 +51,7 @@ export function Button(props: ButtonProps) {
     const {
       href,
       external = false,
+      download,
       variant = "primary",
       size = "md",
       icon,
@@ -59,6 +62,14 @@ export function Button(props: ButtonProps) {
     } = props;
     const classes = cn(base, variants[variant], sizes[size], className);
 
+    if (download) {
+      return (
+        <a href={href} download={download} onClick={onClick} aria-label={ariaLabel} className={classes}>
+          {icon}
+          {children}
+        </a>
+      );
+    }
     if (external) {
       return (
         <a

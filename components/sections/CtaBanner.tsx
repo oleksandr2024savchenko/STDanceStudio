@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { GoldFrame } from "@/components/ui/GoldFrame";
 import { Ornament } from "@/components/ui/Ornament";
 import { Reveal } from "@/components/ui/Reveal";
+import { SaveContactButton } from "@/components/ui/SaveContactButton";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import type { Trainer } from "@/lib/site";
 import { buildTelUrl } from "@/lib/whatsapp";
@@ -15,6 +16,8 @@ type Props = {
   description: string;
   whatsappLabel: string;
   message: string;
+  /** Zeigt zusätzlich „Kontakt speichern“ (Visitenkarte .vcf). */
+  saveContact?: boolean;
 };
 
 /** Abschließender Conversion-Block mit direktem WhatsApp-Kontakt. */
@@ -25,6 +28,7 @@ export function CtaBanner({
   description,
   whatsappLabel,
   message,
+  saveContact = false,
 }: Props) {
   return (
     <section id={id} className="scroll-mt-28 py-20 md:py-28">
@@ -56,6 +60,9 @@ export function CtaBanner({
                   {trainer.phoneDisplay}
                 </a>
               </div>
+              {saveContact && (
+                <SaveContactButton trainer={trainer} variant="ghost" className="mt-6" />
+              )}
             </div>
           </GoldFrame>
         </Reveal>

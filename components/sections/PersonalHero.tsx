@@ -19,10 +19,12 @@ type Props = {
   description: string;
   actions: ReactNode;
   profile: Profile;
+  /** Aktion unten in der Profilkarte, z. B. „Kontakt speichern“. */
+  profileAction?: ReactNode;
 };
 
 /** Hero für persönliche Trainerseiten: Text links, Profilkarte rechts. */
-export function PersonalHero({ badge, title, description, actions, profile }: Props) {
+export function PersonalHero({ badge, title, description, actions, profile, profileAction }: Props) {
   return (
     <section className="relative isolate overflow-hidden pb-24 pt-14 md:pb-32 md:pt-20">
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.3fr_1fr] lg:gap-20">
@@ -70,6 +72,7 @@ export function PersonalHero({ badge, title, description, actions, profile }: Pr
               {profile.note && (
                 <p className="mt-6 text-xs leading-relaxed text-muted">{profile.note}</p>
               )}
+              {profileAction && <div className="mt-6">{profileAction}</div>}
             </aside>
           </GoldFrame>
         </Reveal>

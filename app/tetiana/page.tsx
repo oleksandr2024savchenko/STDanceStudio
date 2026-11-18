@@ -12,6 +12,7 @@ import { ServiceGrid } from "@/components/sections/ServiceGrid";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
+import { SaveContactButton } from "@/components/ui/SaveContactButton";
 import { ThemeScope } from "@/components/ui/ThemeScope";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -83,6 +84,7 @@ export default function TetianaPage() {
             </Button>
           </>
         }
+        profileAction={<SaveContactButton trainer={trainer} className="w-full" />}
         profile={{
           name: trainer.name,
           role: trainer.role,
@@ -303,6 +305,7 @@ export default function TetianaPage() {
         description="Schreiben Sie mir direkt per WhatsApp: kurz Ihr Anliegen und Ihr Wunschzeitraum. Ich melde mich persönlich bei Ihnen."
         whatsappLabel="Jetzt per WhatsApp schreiben"
         message={tetianaMessages.general}
+        saveContact
       />
 
       <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, tetianaMessages.general)} />
