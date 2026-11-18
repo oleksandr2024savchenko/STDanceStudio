@@ -40,15 +40,13 @@
 
 ## Дизайн-система «Viennese Quiet Luxury»
 
-Кольори задані як CSS-змінні (RGB-канали) у `app/globals.css` і підключені в `tailwind.config.ts`. Компоненти використовують тільки токени (`bg-canvas`, `text-ink`, `border-line`, `text-gold-700`, `bg-brass` …), а не hex-коди, щоб теми працювали автоматично.
+**Одна світла золото-пудрова тема на весь сайт.** Окремих темних чи кольорових тем для сторінок не робимо: власник явно відмовився від чорного `/oleksandr` і пудрового `/tetiana`, бо сайт виглядав різношерсно.
 
-- **Світла палацова тема** (за замовчуванням): canvas `#FBF9F5`, surface `#FFFFFF`, line `#EADBCE`, ink `#181716`, золото `#C5A059` / `#B88E3E`.
-- **Темна вечірня тема `noir`** (`/oleksandr`): canvas `#09080A`, surface `#141418`, рамки золото/30, текст шампань `#FDF8EE`. Вмикається обгорткою `<ThemeScope theme="noir">` на сторінці; тема поширюється на хедер і футер через `:root:has([data-theme=…])`.
-- **М'яка тема `cashmere`** (`/tetiana`): пудровий кашемір `#E8DDD9` / `#A39089` як акцент на фонах секцій і рамках.
-- **CTA-кнопки** (`components/ui/Button.tsx`, клас `.btn-primary`): на світлих темах — глибокий антрацит `#1C1917` з текстом `#FAF7F2` і рамкою золото/50; на `noir` — золотий градієнт `#DFBE74 → #C5A059 → #A67C37` з текстом `#121110`. Жовто-гірчичних градієнтів не використовувати.
-- **Типографіка:** заголовки `font-serif` (Cormorant Garamond), текст `font-sans` (Plus Jakarta Sans), шрифти через `next/font` (self-hosted, без Google-запитів у браузері). Акцентні слова в заголовках — `*слово*` → `AccentText` (золотий курсив, без плашок).
+- Палітра в `tailwind.config.ts`: canvas `#FAF8F5` / `#F5F1EA`, surface `#FFFFFF`, line `#E8E2D7`, ink `#1A1A1A`, muted `#6E6B65`, brass `#D4AF37`, шкала `gold` (500 = `#C5A059`, 700 = `#8A6A2B` для тексту).
+- **CTA-кнопки — золотий градієнт** `#E8CF7C → #D4AF37 → #B8902A` (`bg-gold-gradient`). Колір має бути саме золотим: не гірчичним, не коричневим, не чорним. Чорних кнопок і чорних плашок не використовувати.
+- **Типографіка:** заголовки `font-serif` (Cormorant Garamond), текст `font-sans` (Plus Jakarta Sans), через `next/font` (self-hosted). Акцентні слова — `*слово*` → `AccentText` (золотий курсив, без плашок).
 - **H1:** `leading-[1.15]` + `pt-2`, щоб не обрізались засічки.
-- Без розмитих радіальних плям — тільки тонкі золоті рамки (`GoldFrame`), орнамент `Ornament` (— ✦ —), арки для фото (`MediaFrame`).
+- Без розмитих радіальних плям — тонкі золоті рамки (`GoldFrame`), орнамент `Ornament` (— ✦ —), арки для фото (`MediaFrame`).
 
 ## Структура
 
@@ -58,7 +56,7 @@ components/
   layout/               Header (логотип по центру, зменшується при скролі), Footer, LanguageSwitcher (поки тільки UI)
   sections/             секції сторінок (Hero, PersonalHero, PricingSection, FaqSection …)
   forms/                форми, що формують повідомлення і відкривають WhatsApp
-  ui/                   Button, Card, GoldFrame, MediaFrame, StatusBadge, ThemeScope, SaveContactButton, WhatsAppButton …
+  ui/                   Button, Card, GoldFrame, MediaFrame, StatusBadge, SaveContactButton, WhatsAppButton …
   seo/JsonLd.tsx
 lib/
   site.ts               назва, адреса, тренери (телефони), навігація

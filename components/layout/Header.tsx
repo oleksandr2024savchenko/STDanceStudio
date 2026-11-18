@@ -54,7 +54,7 @@ export function Header() {
                     aria-current={active ? "page" : undefined}
                     className={cn(
                       "whitespace-nowrap px-2 py-2 text-[12.5px] font-normal tracking-[0.04em] transition-colors min-[1100px]:px-2.5 min-[1100px]:text-[13px] min-[1100px]:tracking-[0.06em] xl:px-4 xl:text-sm xl:tracking-[0.08em]",
-                      active ? "text-gold-700" : "text-ink/80 hover:text-gold-700",
+                      active ? "text-gold-700" : "text-[#3A3835] hover:text-gold-500",
                     )}
                   >
                     {item.label}

@@ -15,35 +15,32 @@ const config: Config = {
     },
     extend: {
       colors: {
-        /**
-         * Alle Markenfarben kommen aus CSS-Variablen (RGB-Kanäle, siehe app/globals.css),
-         * damit Seiten über `ThemeScope` ein eigenes Farbschema bekommen können.
-         */
+        /** Hintergrund: warmes Elfenbein / Seide. */
         canvas: {
-          DEFAULT: "rgb(var(--canvas) / <alpha-value>)",
-          alt: "rgb(var(--canvas-alt) / <alpha-value>)",
+          DEFAULT: "#FAF8F5",
+          alt: "#F5F1EA",
         },
-        /** Gold für Rahmen, Konturen und Zierrat (meist mit Alpha verwenden). */
-        brass: "rgb(var(--brass) / <alpha-value>)",
+        /** Champagnergold für Rahmen, Konturen und Zierrat (meist mit Alpha verwenden). */
+        brass: "#D4AF37",
         /** Karten und Container. */
-        surface: "rgb(var(--surface) / <alpha-value>)",
+        surface: "#FFFFFF",
         /** Dünne, warme Rahmen und Trennlinien. */
-        line: "rgb(var(--line) / <alpha-value>)",
-        /** Haupttext und Überschriften. */
-        ink: "rgb(var(--ink) / <alpha-value>)",
-        /** Zweittext. */
-        muted: "rgb(var(--muted) / <alpha-value>)",
-        /** Mattes Wiener Gold: 500 = Akzent, 700 = Text auf dem jeweiligen Grund. */
+        line: "#E8E2D7",
+        /** Haupttext und Überschriften: tiefer, samtiger Graphit. */
+        ink: "#1A1A1A",
+        /** Zweittext: gedämpftes Aschgrau. */
+        muted: "#6E6B65",
+        /** Mattes Champagnergold: 500 = Akzent, 700 = Text auf hellem Grund. */
         gold: {
-          50: "rgb(var(--gold-50) / <alpha-value>)",
+          50: "#FBF6EA",
           100: "#F5EBD3",
           200: "#EBD6A9",
           300: "#DDC083",
           400: "#D2AE6C",
-          500: "rgb(var(--gold-500) / <alpha-value>)",
-          600: "rgb(var(--gold-600) / <alpha-value>)",
-          700: "rgb(var(--gold-700) / <alpha-value>)",
-          800: "rgb(var(--gold-800) / <alpha-value>)",
+          500: "#C5A059",
+          600: "#B38F46",
+          700: "#8A6A2B",
+          800: "#664E21",
           900: "#443418",
         },
       },
@@ -55,6 +52,8 @@ const config: Config = {
         eyebrow: "0.28em",
       },
       boxShadow: {
+        cta: "inset 0 1px 0 rgba(255,255,255,0.55), 0 8px 20px -10px rgba(166,124,30,0.55)",
+        "cta-hover": "inset 0 1px 0 rgba(255,255,255,0.65), 0 12px 26px -12px rgba(166,124,30,0.65)",
         /** Realistische, weiche Tiefe für gerahmte Flächen. */
         frame: "0 20px 50px rgba(0,0,0,0.08)",
         glass: "0 10px 30px -18px rgba(0,0,0,0.12)",
@@ -63,7 +62,7 @@ const config: Config = {
       },
       backgroundImage: {
         "gold-gradient":
-          "linear-gradient(135deg, #DFBE74 0%, #C5A059 50%, #A67C37 100%)",
+          "linear-gradient(135deg, #E8CF7C 0%, #D4AF37 48%, #B8902A 100%)",
       },
       keyframes: {
         "fade-up": {

@@ -47,7 +47,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         aria-controls={listId}
         aria-label={word}
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex items-center gap-1.5 rounded-[2px] px-1.5 py-2 text-[13px] font-normal tracking-[0.06em] text-ink/80 transition-colors hover:text-gold-700 sm:px-2.5 xl:text-sm xl:tracking-[0.08em]"
+        className="inline-flex items-center gap-1.5 rounded-[2px] px-1.5 py-2 text-[13px] font-normal tracking-[0.06em] text-[#3A3835] transition-colors hover:text-gold-700 sm:px-2.5 xl:text-sm xl:tracking-[0.08em]"
       >
         <span>{word}</span>
         <ChevronDown

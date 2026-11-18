@@ -13,7 +13,6 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { SaveContactButton } from "@/components/ui/SaveContactButton";
-import { ThemeScope } from "@/components/ui/ThemeScope";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -45,7 +44,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function OleksandrPage() {
   return (
-    <ThemeScope theme="noir">
+    <>
       <JsonLd
         data={buildTrainerSchema({
           trainer,
@@ -213,6 +212,6 @@ export default function OleksandrPage() {
       />
 
       <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, oleksandrMessages.general)} />
-    </ThemeScope>
+    </>
   );
 }
