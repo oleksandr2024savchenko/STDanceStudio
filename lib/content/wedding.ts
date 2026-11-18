@@ -125,7 +125,7 @@ export const weddingFaq: readonly FaqItem[] = [
   {
     question: "Können wir auch ohne Tanzerfahrung teilnehmen?",
     answer:
-      "Selbstverständlich. Die meisten Brautpaare haben vorher nie Gesellschaftstanz getanzt. Wir passen Tempo und Schwierigkeit an Sie beide an.",
+      "Selbstverständlich. Die meisten Brautpaare stehen zum ersten Mal gemeinsam auf dem Parkett. Wir passen Tempo und Schwierigkeit an Sie beide an.",
   },
   {
     question: "Wann sollten wir mit dem Training beginnen?",

@@ -29,7 +29,7 @@ export const extraServices: readonly ExtraService[] = [
     bullets: [
       "Wiener Walzer und Langsamer Walzer, Polka sowie weitere Ballklassiker",
       "Führen und Folgen, Haltung und Etikette auf dem Ballparkett",
-      "Einzel-, Paar- oder Gruppenunterricht – auch als kompakter Intensivkurs vor dem Ball",
+      "Einzel-, Paar- oder Gruppentraining – auch als kompaktes Intensivtraining vor dem Ball",
       "Einstudieren von Balleröffnung und Einlagen für Komitees (siehe Show)",
     ],
     cta: {
@@ -50,13 +50,13 @@ export const extraServices: readonly ExtraService[] = [
     teaser: "Ein Stück Wiener Flair: den Walzer in kurzer Zeit selbst tanzen.",
     paragraphs: [
       "Sie sind in Wien zu Gast, feiern einen besonderen Anlass oder möchten einfach das Wiener Lebensgefühl spüren? In einer persönlichen Einheit lernen Sie die Grundlagen des Wiener Walzers – ganz ohne Vorkenntnisse.",
-      "Wir unterrichten auf Deutsch, Englisch, Ukrainisch und Russisch. Am Ende tanzen Sie Ihre ersten Runden zu klassischer Musik.",
+      "Wir trainieren mit Ihnen auf Deutsch, Englisch, Ukrainisch oder Russisch. Am Ende tanzen Sie Ihre ersten Runden zu klassischer Musik.",
     ],
     bullets: [
       "Für Einzelpersonen, Paare, Familien und kleine Gruppen",
       "Keine Vorkenntnisse nötig, bequeme Kleidung genügt",
       "Auch als Geschenk, für Jubiläen oder Junggesellenabschiede",
-      "Unterricht auf Deutsch, Englisch, Ukrainisch oder Russisch",
+      "Training auf Deutsch, Englisch, Ukrainisch oder Russisch",
     ],
     cta: {
       label: "Wiener Walzer anfragen",

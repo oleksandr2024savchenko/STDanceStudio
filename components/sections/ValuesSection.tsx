@@ -10,7 +10,7 @@ export function ValuesSection() {
       <SectionHeader
         eyebrow="Philosophie"
         tanz={1}
-        title="Tanzen als *Schule fürs Leben*"
+        title="Tanzen als *Training fürs Leben*"
         description="Wir verstehen Tanzsport als Erziehung zu Konzentration, Respekt und Selbstsicherheit. Musik und Bewegung sind das Mittel – Charakter ist das Ergebnis."
       />
       <ul className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
