@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { BASE_PATH } from "@/lib/site";
+import { CurtainReveal } from "./CurtainReveal";
 import { GoldFrame } from "./GoldFrame";
 
 type Props = {
@@ -24,14 +25,16 @@ export function MediaFrame({
     <div className={cn("relative mx-auto w-full max-w-md", className)}>
       <GoldFrame shape="arch">
         <div className={cn("relative bg-canvas-alt", aspectClassName)}>
-          <Image
-            src={`${BASE_PATH}${src}`}
-            alt={alt}
-            fill
-            priority={priority}
-            sizes="(min-width: 1024px) 440px, 90vw"
-            className="object-cover"
-          />
+          <CurtainReveal>
+            <Image
+              src={`${BASE_PATH}${src}`}
+              alt={alt}
+              fill
+              priority={priority}
+              sizes="(min-width: 1024px) 440px, 90vw"
+              className="object-cover"
+            />
+          </CurtainReveal>
         </div>
       </GoldFrame>
     </div>

@@ -34,10 +34,10 @@ export function WhatsAppFloat({ href, label = "WhatsApp", threshold = 600 }: Pro
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-[2px] bg-gold-gradient px-6 py-3.5 text-xs font-medium uppercase tracking-[0.18em] text-ink shadow-cta transition-all duration-300 hover:brightness-105"
+          title={label}
+          className="fixed bottom-6 right-6 z-30 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/60 bg-gold-gradient text-ink shadow-cta transition-all duration-300 hover:scale-105 hover:brightness-105"
         >
-          <MessageCircle className="h-5 w-5" aria-hidden="true" />
-          {label}
+          <MessageCircle className="h-6 w-6" aria-hidden="true" />
         </motion.a>
       )}
     </AnimatePresence>

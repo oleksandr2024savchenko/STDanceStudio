@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { BASE_PATH, mainNav, site } from "@/lib/site";
@@ -37,7 +36,7 @@ export function Header() {
       <div
         className={cn(
           "container grid grid-cols-[1fr_auto_1fr] items-center gap-2 transition-[padding] sm:gap-4 duration-300",
-          compact ? "py-1.5 lg:py-2.5" : "py-3 lg:py-5 xl:py-6",
+          compact ? "py-1.5 lg:py-2" : "py-2.5 lg:py-3.5",
         )}
       >
         <nav
@@ -79,13 +78,13 @@ export function Header() {
             priority
             className={cn(
               "w-auto transition-[height] duration-300",
-              compact ? "h-14 lg:h-20" : "h-24 sm:h-28 lg:h-36 xl:h-40",
+              compact ? "h-14 lg:h-16" : "h-20 sm:h-24 lg:h-28",
             )}
           />
         </Link>
 
         <div className="col-start-3 flex items-center gap-1 justify-self-end max-lg:contents lg:gap-3">
-          <LanguageSwitcher className="max-lg:col-start-1 max-lg:row-start-1 max-lg:justify-self-start" />
+          {/* Sprachauswahl ausgeblendet, bis echte Übersetzungen vorliegen (Komponente bleibt erhalten). */}
           <Button href="/#schnuppertraining" className="hidden lg:inline-flex">
             Schnuppertraining
           </Button>

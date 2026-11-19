@@ -13,6 +13,18 @@ export function Footer() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-gold-500 to-transparent"
       />
+      {/* Abschiedszeile: ein großer, persönlicher Schlusssatz statt eines Standard-Footers. */}
+      <div className="container pt-20">
+        <p className="font-serif text-5xl leading-[1.05] text-ink md:text-7xl lg:text-8xl">
+          Bis bald auf dem <span className="accent-word">Parkett.</span>
+        </p>
+        <div aria-hidden="true" className="mt-10 flex items-center gap-4">
+          <span className="h-px w-20 bg-brass" />
+          <span className="h-1.5 w-1.5 rotate-45 bg-brass" />
+          <span className="h-px flex-1 bg-line" />
+        </div>
+      </div>
+
       <div className="container grid grid-cols-1 gap-12 py-16 md:grid-cols-3">
         <div>
           <Image

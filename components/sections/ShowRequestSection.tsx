@@ -21,7 +21,7 @@ export function ShowRequestSection() {
             Unverbindliche Anfrage
           </p>
           <h2 className="text-4xl leading-[1.1] md:text-5xl">
-            <AccentText text="Erzählen Sie uns von Ihrem *Auftritt*" />
+            <AccentText text="Erzählen Sie uns von Ihrem *Auftritt*" tone="ink" />
           </h2>
           <Ornament align="left" className="mt-6" />
           <p className="mt-6 text-base leading-relaxed text-muted md:text-lg">

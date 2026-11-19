@@ -1,7 +1,8 @@
-import { ArrowRight, Check, type LucideIcon } from "lucide-react";
+import { ArrowRight, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
+import { toRoman, waltzDelay } from "@/lib/motion";
 
 export type ServiceItem = {
   id: string;
@@ -25,21 +26,24 @@ export function ServiceGrid({ services }: Props) {
           : "grid grid-cols-1 gap-6 md:grid-cols-2"
       }
     >
-      {services.map(({ id, title, text, icon: Icon, points, link }, index) => (
+      {services.map(({ id, title, text, points, link }, index) => (
         <li key={id}>
-          <Reveal delay={(index % 2) * 0.08} className="h-full">
+          <Reveal delay={waltzDelay(index)} className="h-full">
             <Card className="flex h-full flex-col">
-              <span className="flex h-12 w-12 items-center justify-center rounded-[2px] border border-gold-500/40 text-gold-700">
-                <Icon className="h-5 w-5" aria-hidden="true" />
+              <span
+                aria-hidden="true"
+                className="font-serif text-4xl italic leading-none text-gold-600"
+              >
+                {toRoman(index + 1)}.
               </span>
-              <h3 className="mt-6 text-2xl">{title}</h3>
+              <h3 className="mt-5 text-2xl">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">{text}</p>
               <ul className="mt-6 flex-1 space-y-3 text-sm text-ink/80">
                 {points.map((point) => (
                   <li key={point} className="flex items-start gap-3">
-                    <Check
-                      className="mt-0.5 h-4 w-4 shrink-0 text-gold-700"
+                    <span
                       aria-hidden="true"
+                      className="mt-[0.55em] h-1.5 w-1.5 shrink-0 rotate-45 bg-brass"
                     />
                     {point}
                   </li>

@@ -40,7 +40,7 @@ export function CtaBanner({
                 Kontakt
               </p>
               <h2 className="mx-auto max-w-2xl text-4xl leading-[1.1] md:text-5xl">
-                <AccentText text={title} />
+                <AccentText text={title} tone="ink" />
               </h2>
               <Ornament className="mt-6" />
               <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">

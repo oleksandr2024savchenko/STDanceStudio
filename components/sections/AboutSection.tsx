@@ -38,7 +38,7 @@ export function AboutSection() {
             ST Dance Studio
           </p>
           <h2 id="ueber-uns-title" className="text-4xl leading-[1.1] md:text-5xl">
-            <AccentText text="Über *uns*" />
+            <AccentText text="Über *uns*" tone="ink" />
           </h2>
           <Ornament align="left" className="mt-6" />
 

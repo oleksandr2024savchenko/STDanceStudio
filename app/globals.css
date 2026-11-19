@@ -22,6 +22,12 @@
     box-decoration-break: clone;
   }
 
+  /* Ruhige Hervorhebung für Abschnittsüberschriften: Kursive in Textfarbe, ohne Gold. */
+  .accent-word-ink {
+    @apply font-normal italic;
+    letter-spacing: -0.01em;
+  }
+
   /* Feine Strichstärke für alle Icons. */
   svg.lucide {
     stroke-width: 1.5;
@@ -44,6 +50,30 @@
   h3,
   h4 {
     @apply font-serif font-medium tracking-tight text-ink;
+  }
+
+  /* Mediävalziffern der Cormorant: Preise und Zahlen wirken wie gesetzt, nicht wie getippt. */
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
+    font-variant-numeric: oldstyle-nums proportional-nums;
+  }
+
+  /*
+   * Hauch von Papierstruktur über der ganzen Seite, damit die Fläche nicht digital-flach wirkt.
+   * Fest positioniert, klickdurchlässig, sehr geringe Deckkraft.
+   */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.28  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
 
   ::selection {

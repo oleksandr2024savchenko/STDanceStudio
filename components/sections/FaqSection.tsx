@@ -38,7 +38,7 @@ export function FaqSection({
   return (
     <Section id={id} className={className}>
       <JsonLd data={schema} />
-      <SectionHeader eyebrow={eyebrow} tanz={tanz} title={title} description={description} />
+      <SectionHeader eyebrow={eyebrow} tanz={tanz} title={title} description={description} align="center" />
       <Reveal className="mx-auto mt-14 max-w-3xl divide-y divide-line border-y border-line">
         {items.map((item) => (
           <details key={item.question} className="group py-6">

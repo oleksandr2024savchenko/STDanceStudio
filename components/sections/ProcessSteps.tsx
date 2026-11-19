@@ -17,7 +17,7 @@ export function ProcessSteps({ steps, as: Heading = "h3", className }: Props) {
     <ol className={cn("grid grid-cols-1 gap-8", columns, className)}>
       {steps.map((step, index) => (
         <li key={step.title} className="border-t border-gold-500/40 pt-6">
-          <span className="font-serif text-4xl text-gold-700">
+          <span className="font-serif text-5xl italic leading-none text-gold-600">
             {String(index + 1).padStart(2, "0")}
           </span>
           <Heading className="mt-3 text-xl">{step.title}</Heading>
