@@ -16,7 +16,6 @@ import { SaveContactButton } from "@/components/ui/SaveContactButton";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import {
   proAmSteps,
   soloLatinBenefits,
@@ -35,7 +34,6 @@ import { tetianaAbout } from "@/lib/content/about";
 import { buildTrainerSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { trainers } from "@/lib/site";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 const trainer = trainers.tetiana;
 
@@ -306,8 +304,6 @@ export default function TetianaPage() {
         message={tetianaMessages.general}
         saveContact
       />
-
-      <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, tetianaMessages.general)} />
     </>
   );
 }

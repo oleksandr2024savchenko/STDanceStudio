@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import { buildClubSchema } from "@/lib/schema";
 import { SITE_URL, site } from "@/lib/site";
 import "./globals.css";
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppFloat />
         <JsonLd data={buildClubSchema()} />
       </body>
     </html>

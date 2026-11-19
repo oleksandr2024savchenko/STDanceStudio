@@ -16,7 +16,6 @@ import { SaveContactButton } from "@/components/ui/SaveContactButton";
 import { Section } from "@/components/ui/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import {
   ballBenefits,
   ballRepertoire,
@@ -31,7 +30,6 @@ import { oleksandrAbout } from "@/lib/content/about";
 import { buildTrainerSchema } from "@/lib/schema";
 import { buildPageMetadata } from "@/lib/seo";
 import { trainers } from "@/lib/site";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 const trainer = trainers.oleksandr;
 
@@ -210,8 +208,6 @@ export default function OleksandrPage() {
         message={oleksandrMessages.general}
         saveContact
       />
-
-      <WhatsAppFloat href={buildWhatsAppUrl(trainer.phone, oleksandrMessages.general)} />
     </>
   );
 }
